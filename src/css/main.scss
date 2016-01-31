@@ -40,6 +40,7 @@ body {
 	color: $txt-primary;
 	-webkit-text-size-adjust: 100%;
 	//fix for iOS
+	margin-top: 121px;
 }
 ul, ol {
 	margin: 0;
@@ -266,79 +267,28 @@ Hero
 	}
 }
 .navigation {
-	transition: all 300ms ease-in-out;
-	position: fixed;
+	position: absolute;
+	top: 0;
 	width: 100%;
+	padding: 35px 0;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+	background: white;
 	z-index: 999;
+
+	.logo {
+		display: table;
+		margin: 0 auto;
+		img {
+			height: 50px;
+			margin-left: -35px;
+		}
+	}
 }
 .fixed {
 	position: fixed;
 	background-color: #232731;
 	z-index: 999;
 	width: 100%;
-}
-header {
-	padding: 50px 0;
-	border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-	position: relative;
-	width: 1170px;
-	margin: 0 auto;
-	transition: padding 300ms ease-in-out;
-
-	a {
-		color: $txt-light;
-		text-transform: uppercase;
-		font-size: $nav-font-size;
-
-		&.login {
-			margin-right: 20px;
-		}
-	}
-	.logo {
-		display: inline-block;
-	}
-	ul.primary-nav {
-		margin: 0 0 0 75px;
-		padding: 0;
-
-		li {
-			display: inline;
-
-			a {
-				color: $txt-light;
-				padding-right: 25px;
-
-				&:hover {
-					color: $accent-color;
-				}
-			}
-			&:last-child a {
-				padding-right: 0px;
-			}
-		}
-	}
-	ul.member-actions {
-		li {
-			display: inline;
-
-			a {
-				color: $txt-light;
-
-				&:hover {
-					color: $accent-color;
-				}
-			}
-		}
-	}
-	.header-nav {
-		display: inline-block;
-	}
-	.member-actions {
-		position: absolute;
-		right: 0;
-		top: 41px;
-		transition: all 300ms ease-in-out;
-	}
 }
 .down-arrow {
 	color: #fff;
