@@ -1,12 +1,5 @@
 module.exports = function(grunt) {
 
-	var deployFile = 'deploy_info.json';
-	    deployInfo = {};
-
-	if (grunt.file.exists(deployFile)) {
-		deployInfo = grunt.file.readJSON(deployFile);
-	}
-
 	grunt.initConfig({
 		copy: {
 			main: {
@@ -83,24 +76,6 @@ module.exports = function(grunt) {
 				files: 'src/img/**/*.{jpg,png}',
 				tasks: 'copy'
 			}
-		},
-
-		sshconfig: {
-			production: {
-				host:     '<%= deployInfo.host %>',
-				username: '<%= deployInfo.username %>',
-				password: '<%= deployInfo.password %>'
-			}
-		},
-
-		syncdeploy: {
-			main: {
-				cwd: 'dist/',
-				src: ['**/*', '.htaccess']
-			},
-			options: {
-				removeEmpty: true
-			}
 		}
 	});
 
@@ -115,7 +90,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build',      ['copy', 'sass', 'autoprefixer']);
 	grunt.registerTask('build-prod', ['build', 'htmlmin']);
-	grunt.registerTask('deploy',     ['build-prod', 'syncdeploy']);
 	grunt.registerTask('default',    ['build', 'watch']);
 
 };
