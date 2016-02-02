@@ -29,6 +29,10 @@
 		padding-top: 32%;
 	}
 
+	.hero-content h1 {
+		font-size: 42px;
+	}
+
 	.header-nav {
 		position: fixed;
 		background-color: #000;
@@ -273,8 +277,10 @@
 			margin-bottom: 20px;
 		}
 
-		.hero h1 {
-			font-size: 50px;
+		.hero-content h1 {
+			font-size: 20px;
+			font-weight: 700;
+			letter-spacing: 1px
 		}
 
 		.btn-margin-right {
