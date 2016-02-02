@@ -594,6 +594,19 @@ Features-stack
 Sign up form
 ========================================================================== */
 .sign-up {
+	background: $accent-color;
+
+	.signup-box {
+		position: relative;
+		top: -50px;
+		padding: 30px;
+		margin-bottom: -50px;
+		border-bottom: 2px solid #eff6f7;
+		background: white;
+		box-shadow: 0 5px 25px rgba(97, 116, 117, 0.3);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
 	.signup-form {
 		.sign-up-btn {
 			padding: 15px 0;
