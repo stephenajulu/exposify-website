@@ -38,6 +38,23 @@
 	background-color: $accent-color-hover;
 	border-color: $accent-color-hover;
 }
+.btn-secondary {
+	color: $txt-secondary;
+	border-color: $txt-secondary;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+	color: $txt-secondary;
+	background-color: $seconday-color;
+	border-color: $seconday-color;
+}
+.btn-secondary-fill {
+	background-color: $seconday-color;
+	border-color: $seconday-color;
+}
+.btn-secondary-fill:hover, .btn-secondary-fill:focus {
+	background-color: $seconday-color-hover;
+	border-color: $seconday-color-hover;
+}
 .btn-small {
 	padding: 8px 40px;
 }
