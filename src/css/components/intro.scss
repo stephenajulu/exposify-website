@@ -13,3 +13,10 @@
 	display: inline-block;
 	width: 80%;
 }
+
+@media (max-width: 1200px) {
+	.intro-content {
+		display: inline-block;
+		width: 70%;
+	}
+}
