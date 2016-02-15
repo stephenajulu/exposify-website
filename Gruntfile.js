@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 			main: {
 				expand: true,
 				cwd: 'src',
-				src: ['**', '!css/**/*', '.htaccess'],
+				src: ['**', '!assets/css/**/*', '.htaccess'],
 				dest: 'dist/',
 			},
 		},
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 					compass: true
 				},
 				files: {
-					'dist/css/main.css': 'src/css/main.scss'
+					'dist/assets/css/main.css': 'src/assets/css/main.scss'
 				}
 			}
 		},
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 				map: true
 			},
 			main: {
-				src: 'dist/css/main.css'
+				src: 'dist/assets/css/main.css'
 			}
 		},
 
@@ -68,12 +68,12 @@ module.exports = function(grunt) {
 			},
 
 			css: {
-				files: 'src/css/**/*.{sass,scss}',
+				files: 'src/assets/css/**/*.{sass,scss}',
 				tasks: 'sass'
 			},
 
 			img: {
-				files: 'src/img/**/*.{jpg,png}',
+				files: 'src/assets/img/**/*.{jpg,png}',
 				tasks: 'copy'
 			}
 		}
