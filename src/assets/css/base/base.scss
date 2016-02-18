@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 .group:after {
 	content: "";
 	display: table;
@@ -15,6 +19,7 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 body {
+	margin: 0;
 	font-family: $sans-serif;
 	font-weight: $light;
 	color: $txt-primary;
