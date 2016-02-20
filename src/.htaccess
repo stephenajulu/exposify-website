@@ -13,3 +13,8 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 RewriteCond %{HTTP_HOST} !\.dev$
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Cross origin access for fonts
+<FilesMatch ".(eot|ttf|otf|woff)">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
