@@ -8,6 +8,31 @@
 	text-align: center;
 }
 
+.hidden {
+	display: none !important;
+}
+
+.hidden, .invisible {
+	visibility: hidden;
+}
+
+.print-only {
+	display: none;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix:after, .clearfix:before {
+	display: table;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
 @media (max-width: 991px) {
 	.last {
 		margin: 0;

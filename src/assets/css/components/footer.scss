@@ -15,11 +15,10 @@
 	width: 30px;
 	height: 30px;
 	color: white;
-	vertical-align: middle;
 	background-color: $accent-color;
 	border-radius: 50%;
 	.fa {
-		vertical-align: -webkit-baseline-middle;
+		vertical-align: sub;
 	}
 	&:hover {
 		color: inherit;

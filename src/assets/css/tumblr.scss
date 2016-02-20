@@ -106,72 +106,6 @@ body.permalink #posts article {
 .icon_reblog_sm:before          {content: "EA08";}
 .icon_search:before             {content: "EA09";}
 
-// html {
-// 	top: 0 !important;
-// }
-//
-// body, input, textarea {
-// 	font-size: 15px;
-// 	-webkit-font-smoothing: antialiased;
-// }
-//
-// body {
-// 	margin: 0 auto;
-// 	line-height: 1.4;
-// 	background: #fafafa;
-// 	color: #444;
-// 	font-family: "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
-// }
-//
-// a {
-// 	color: #529ecc;
-// 	text-decoration: underline;
-// }
-//
-// iframe, img, object {
-// 	vertical-align: middle;
-// }
-//
-// input, textarea {
-// 	color: #333;
-// 	font-family: inherit;
-// 	box-sizing: border-box;
-// 	-webkit-tap-highlight-color: transparent;
-// }
-//
-// hr {
-// 	margin: 16px auto;
-// 	width: 108px;
-// 	border: 0;
-// 	border-top: 1px solid #e6e6e6;
-// 	border-bottom: 1px solid transparent;
-// }
-
-.hidden {
-	display: none !important;
-}
-
-.hidden, .invisible {
-	visibility: hidden;
-}
-
-.print-only {
-	display: none;
-}
-
-.clearfix {
-	zoom: 1;
-}
-
-.clearfix:after, .clearfix:before {
-	display: table;
-	content: "";
-}
-
-.clearfix:after {
-	clear: both;
-}
-
 br.clear, div.clear {
 	clear: both;
 	height: 0;
@@ -562,7 +496,7 @@ body.is-scrolling #posts * {
 .blog-title {
 	font-size: 56px;
 	line-height: 1.2;
-	margin: 40px 0 0;
+	margin: 50px 0 0;
 	word-wrap: break-word;
 }
 
