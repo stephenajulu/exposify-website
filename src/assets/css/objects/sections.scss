@@ -5,3 +5,8 @@
 .section-title {
 	margin-top: 0;
 }
+
+.section-foreground {
+	position: relative;
+	z-index: 99;
+}
