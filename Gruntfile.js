@@ -10,10 +10,27 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		copy: {
 			main: {
-				expand: true,
-				cwd: 'src',
-				src: ['**', '!assets/css/**/*', '.htaccess'],
-				dest: 'dist/'
+				files: [
+					{
+						expand: true,
+						cwd: 'src',
+						src: ['**', '!assets/css/**/*', '!_*/**', '.htaccess'],
+						dest: 'dist/'
+					},
+					{
+						expand: true,
+						cwd: 'src/_pages/',
+						src: '**/*.html',
+						dest: 'dist/',
+						rename: function(dest, src) {
+							if (src.indexOf('index.html') == -1) {
+								return dest + src.replace('.html', '/index.html');
+							} else {
+								return dest + src;
+							}
+						}
+					}
+				]
 			}
 		},
 
