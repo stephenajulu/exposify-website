@@ -782,6 +782,18 @@ body.is-scrolling #posts * {
 	margin-left: -45px;
 }
 
+.read_more_container {
+	text-align: center;
+}
+
+.read_more {
+	@extend .btn;
+	@extend .btn-secondary;
+	@extend .btn-secondary-fill;
+	padding: 10px 20px;
+	text-decoration: none !important;
+}
+
 .post img {
 	height: auto;
 }
