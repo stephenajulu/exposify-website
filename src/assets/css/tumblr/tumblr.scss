@@ -8,42 +8,46 @@
 	src: url("/assets/fonts/optica-icons.woff") format("woff");
 }
 
-.related-posts-wrapper>h2 {
-	font-size: 13px;
-	margin: 27px 0;
-	text-align: center;
-	text-transform: uppercase;
+.related-posts-wrapper {
+	> h2 {
+		font-size: 13px;
+		margin: 27px 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	article {
+		margin: 0 15px 30px;
+		position: relative;
+		&.visible .post-wrapper {
+			overflow: visible;
+		}
+	}
+	.grid article {
+		opacity: 0;
+		width: 300px;
+	}
 }
 
-.related-posts-wrapper article {
-	margin: 0 15px 30px;
-	position: relative;
-}
-
-.related-posts-wrapper article.visible .post-wrapper {
-	overflow: visible;
-}
-
-.related-posts-wrapper .grid article {
-	opacity: 0;
-	width: 300px;
+.related-posts {
+	margin: 0 auto;
 }
 
 .related-posts-cta {
 	margin: 5px auto 30px;
 	text-align: center;
-}
-
-.related-posts-cta .button {
-	border-radius: 3px;
-	display: inline-block;
-	font-weight: 700;
-	padding: 10px 20px;
-	text-decoration: none;
-}
-
-.related-posts-cta .button.bordered {
-	border: 1px solid;
+	.button {
+		border-radius: 3px;
+		display: inline-block;
+		font-weight: 700;
+		padding: 10px 20px;
+		text-decoration: none;
+		&.bordered {
+			border: 1px solid;
+		}
+		&.open-in-app {
+			display: none;
+		}
+	}
 }
 
 .pop-menu ul li a .arrow:before, .post-controls .control.share-control .share:before, .post-controls .like_button.liked.interacted:after, .post-controls .like_button.liked:before, .post-controls .like_button:before, .post-controls .reblog_button:before, .reblog-link .reblog-icon:before, .reblog-link .reblog_sm:before {
@@ -1319,11 +1323,6 @@ body.is-scrolling #posts * {
 
 .index-page.grid iframe[src^="//instagram"] {
 	min-height: 370px;
-}
-
-.index-page.grid .spotify_audio_player, .related-posts.grid .spotify_audio_player {
-	height: 80px !important;
-	width: 300px !important;
 }
 
 .text .post-content {
