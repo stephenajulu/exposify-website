@@ -685,98 +685,107 @@ br.clear, div.clear {
 .post-controls {
 	min-width: 150px;
 	color: #a7a7a7;
-}
 
-.post-controls .controls-wrapper {
-	text-align: right;
-	margin-right: 20px;
-}
+	.controls-wrapper {
+		text-align: right;
+		margin-right: 20px;
+	}
 
-.post-controls .control {
-	display: inline-block;
-	position: relative;
-	text-align: left;
-	vertical-align: middle;
-	font-size: 24px;
-	margin-left: 4px;
-}
+	.control {
+		display: inline-block;
+		position: relative;
+		text-align: left;
+		vertical-align: middle;
+		font-size: 24px;
+		margin-left: 4px;
+	}
 
-.post-controls .control .like_button, .post-controls .control .reblog_button, .post-controls .control .share {
-	display: block;
-	text-decoration: none;
-	color: inherit;
-}
 
-.post-controls .control .like_button:hover, .post-controls .control .reblog_button:hover, .post-controls .control .share:hover {
-	color: #8c8c8c;
-}
+	.control .like_button,
+	.control .reblog_button,
+	.control .share {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+	}
 
-.post-controls .control .like_button::before, .post-controls .control .reblog_button::before, .post-controls .control .share::before {
-	display: block;
-	line-height: 1;
-}
 
-.post-controls .control.share-control .share:before {
-	content: "\EA03";
-}
+	.control .like_button:hover,
+	.control .reblog_button:hover,
+	.control .share:hover {
+		color: #8c8c8c;
+	}
 
-.post-controls .reblog_button:before {
-	content: "\EA07";
-}
 
-.post-controls .reblog_button svg {
-	display: none;
-}
+	.control .like_button::before,
+	.control .reblog_button::before,
+	.control .share::before {
+		display: block;
+		line-height: 1;
+	}
 
-.post-controls .like_button:before {
-	content: "\EA04";
-}
+	.control.share-control .share:before {
+		content: "\EA03";
+	}
 
-.post-controls .like_button.liked {
-	color: #d75f45;
-}
+	.reblog_button:before {
+		content: "\EA07";
+	}
 
-.post-controls .like_button.liked:before {
-	content: "\EA05";
-}
+	.reblog_button svg {
+		display: none;
+	}
 
-.post-controls .like_button.liked:hover {
-	color: #d75f45;
-}
+	.like_button:before {
+		content: "\EA04";
+	}
 
-.post-controls .like_button.liked.interacted:after {
-	content: "\EA05";
-}
+	.like_button.liked {
+		color: #d75f45;
+	}
 
-.post-controls .like_button.liked.interacted::after {
-	color: #d75f45;
-	position: absolute;
-	top: -48px;
-	left: 50%;
-	height: 48px;
-	width: 48px;
-	font-size: 48px;
-	line-height: 1;
-	margin-left: -24px;
-	-webkit-animation: wiggle .6s ease-out;
-	animation: wiggle .6s ease-out;
-	z-index: 0;
-	opacity: 0;
-	speak: none;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	pointer-events: none;
-}
+	.like_button.liked:before {
+		content: "\EA05";
+	}
 
-.post-controls .like_button iframe {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: 0;
-	opacity: 0;
+	.like_button.liked:hover {
+		color: #d75f45;
+	}
+
+	.like_button.liked.interacted:after {
+		content: "\EA05";
+	}
+
+	.like_button.liked.interacted::after {
+		color: #d75f45;
+		position: absolute;
+		top: -48px;
+		left: 50%;
+		height: 48px;
+		width: 48px;
+		font-size: 48px;
+		line-height: 1;
+		margin-left: -24px;
+		-webkit-animation: wiggle .6s ease-out;
+		animation: wiggle .6s ease-out;
+		z-index: 0;
+		opacity: 0;
+		speak: none;
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		pointer-events: none;
+	}
+
+	.like_button iframe {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		opacity: 0;
+	}
 }
 
 .caption * {
@@ -798,58 +807,56 @@ br.clear, div.clear {
 	opacity: .7;
 	box-sizing: border-box;
 	float: left;
-}
 
-#pagination a:after {
-	content: '';
-	border: 6px solid transparent;
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 15px;
-}
+	&:after {
+		content: '';
+		border: 6px solid transparent;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 15px;
+	}
 
-#pagination a.next {
-	float: right;
-}
+	&.next {
+		float: right;
+		&:after {
+			border-left: 7px solid #858585;
+			right: 10px;
+		}
+	}
 
-#pagination a.next:after {
-	border-left: 7px solid #858585;
-	right: 10px;
-}
+	&.previous {
+		padding: 10px 18px 10px 28px;
+		&:after {
+			border-right: 7px solid #858585;
+			left: 10px;
+		}
+	}
 
-#pagination a.previous {
-	padding: 10px 18px 10px 28px;
-}
+	&:active {
+		-webkit-transform: translateY(1px);
+		transform: translateY(1px);
+	}
 
-#pagination a.previous:after {
-	border-right: 7px solid #858585;
-	left: 10px;
-}
+	.bg {
+		border-radius: 4px;
+		border: 1px solid;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: .15;
+	}
 
-#pagination a:active {
-	-webkit-transform: translateY(1px);
-	transform: translateY(1px);
-}
+	&.invisible {
+		pointer-events: none;
 
-#pagination .bg {
-	border-radius: 4px;
-	border: 1px solid;
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: .15;
-}
-
-#pagination.invisible {
-	pointer-events: none;
-}
-
-#pagination.invisible .bg {
-	display: none;
+		.bg {
+			display: none;
+		}
+	}
 }
 
 .loader {
@@ -859,16 +866,15 @@ br.clear, div.clear {
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-}
-
-.loader .loader-bar {
-	display: none;
-	height: 16px;
-	width: 16px;
-	margin: 0 3px;
-	opacity: .1;
-	border-radius: 4px;
-	background-color: #d9d9d9;
+	.loader-bar {
+		display: none;
+		height: 16px;
+		width: 16px;
+		margin: 0 3px;
+		opacity: .1;
+		border-radius: 4px;
+		background-color: #d9d9d9;
+	}
 }
 
 .animate>.loader-bar {
@@ -944,10 +950,6 @@ br.clear, div.clear {
 	content: "\EA08";
 }
 
-.android.popover-active, .android.popover-active.notes-popover, .ios.popover-active, .ios.popover-active.notes-popover {
-	overflow: hidden;
-}
-
 .notes-wrapper {
 	position: absolute;
 	bottom: -45px;
@@ -960,52 +962,27 @@ br.clear, div.clear {
 	box-shadow: 0 2px 7px 1px rgba(0, 0, 0, .1);
 	display: none;
 	z-index: 5;
-}
 
-.notes-wrapper.show {
-	display: block;
-	opacity: 0;
-	-webkit-transition: all .25s cubic-bezier(.68, -.55, .265, 1.55);
-	transition: all .25s cubic-bezier(.68, -.55, .265, 1.55);
-}
+	&.show {
+		display: block;
+		opacity: 0;
+		-webkit-transition: all .25s cubic-bezier(.68, -.55, .265, 1.55);
+		transition: all .25s cubic-bezier(.68, -.55, .265, 1.55);
+	}
 
-.notes-wrapper.active {
-	opacity: 1;
-}
+	&.active {
+		opacity: 1;
+	}
 
-.notes-wrapper .notes {
-	padding: 6px 13px;
-	max-height: 69vh;
-	overflow: scroll;
+	.notes {
+		padding: 6px 13px;
+		max-height: 69vh;
+		overflow: scroll;
+	}
 }
 
 .narrow .notes-wrapper {
 	width: 478px;
-}
-
-.android.popover-active.notes-popover .logo-wrapper, .ios.popover-active.notes-popover .logo-wrapper {
-	z-index: 1;
-}
-
-.android .notes-wrapper, .ios .notes-wrapper {
-	position: fixed;
-	top: 9%;
-	left: 0;
-	width: 92vw;
-	margin-left: 4vw;
-	height: 80vh;
-	max-height: 80vh;
-	z-index: 5;
-	-webkit-overflow-scrolling: touch;
-}
-
-.android .notes-wrapper .notes-wrapper-header, .ios .notes-wrapper .notes-wrapper-header {
-	display: block;
-}
-
-.android .notes-wrapper .notes, .ios .notes-wrapper .notes {
-	overflow-x: hidden;
-	overflow-y: auto;
 }
 
 .notes-wrapper-header {
@@ -1024,45 +1001,35 @@ br.clear, div.clear {
 	cursor: pointer;
 }
 
-.android .notes-pop-container.active:before, .ios .notes-pop-container.active:before {
-	background-color: rgba(255, 255, 255, .9);
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	content: '';
-	z-index: 5;
-}
-
 .notes {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-}
 
-.notes li {
-	color: #bdbdbd;
-	color: rgba(90, 90, 90, .6);
-	font-size: 14px;
-	padding: 14px 0 9px;
-	border-top: 1px solid #eee;
-}
+	li {
+		color: #bdbdbd;
+		color: rgba(90, 90, 90, .6);
+		font-size: 14px;
+		padding: 14px 0 9px;
+		border-top: 1px solid #eee;
 
-.notes li:first-child {
-	border-top: 0;
-}
+		&:first-child {
+			border-top: 0;
+		}
 
-.notes li.more_notes_link_container {
-	padding: 0;
-}
+		&.more_notes_link_container {
+			padding: 0;
+		}
 
-.notes li.more_notes_link_container .more_notes_link, .notes li.more_notes_link_container .notes_loading {
-	padding: 14px 0 9px;
-}
+		&.more_notes_link_container .more_notes_link,
+		&.more_notes_link_container .notes_loading {
+			padding: 14px 0 9px;
+		}
 
-.notes .reply {
-	margin: 0;
+		.reply {
+			margin: 0;
+		}
+	}
 }
 
 .avatar_frame {
@@ -1071,30 +1038,29 @@ br.clear, div.clear {
 	position: relative;
 	margin: -2px 12px 0 0;
 	border-radius: 2px;
-}
+	&:before {
+		content: '';
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .05);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		border-radius: 2px;
+	}
 
-.avatar_frame:before {
-	content: '';
-	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .05);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	border-radius: 2px;
-}
-
-.avatar_frame:after {
-	display: none;
-	content: '';
-	background: url('//static.tumblr.com/vr9xgox/X4en0lgid/sprite-1x.png') 0 0 no-repeat;
-	width: 16px;
-	height: 16px;
-	position: absolute;
-	bottom: -6px;
-	z-index: 10;
-	right: -8px;
+	&:after {
+		display: none;
+		content: '';
+		background: url('//static.tumblr.com/vr9xgox/X4en0lgid/sprite-1x.png') 0 0 no-repeat;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		bottom: -6px;
+		z-index: 10;
+		right: -8px;
+	}
 }
 
 .reblog.note .avatar_frame:after {
@@ -1116,26 +1082,25 @@ br.clear, div.clear {
 	display: none;
 }
 
-.notes .avatar {
-	border-radius: 2px;
-	height: 25px;
-	position: relative;
-	width: 25px;
-}
-
-.notes .action {
-	float: left;
-	width: 80%;
-}
-
-.notes a {
-	color: inherit;
-	font-weight: 700;
-	text-decoration: none;
-}
-
-.notes a:hover {
-	color: rgba(90, 90, 90, .7);
+.notes {
+	.avatar {
+		border-radius: 2px;
+		height: 25px;
+		position: relative;
+		width: 25px;
+	}
+	.action {
+		float: left;
+		width: 80%;
+	}
+	a {
+		color: inherit;
+		font-weight: 700;
+		text-decoration: none;
+		&:hover {
+			color: rgba(90, 90, 90, .7);
+		}
+	}
 }
 
 .notes blockquote, .quote .notes blockquote {
@@ -1157,16 +1122,15 @@ br.clear, div.clear {
 	margin: 25px 20px 20px;
 	position: relative;
 	padding: 0;
-}
-
-.comments:before {
-	content: '';
-	top: 0;
-	border-top: 1px solid #eee;
-	position: absolute;
-	width: 100%;
-	margin: -20px;
-	padding: 20px;
+	&:before {
+		content: '';
+		top: 0;
+		border-top: 1px solid #eee;
+		position: absolute;
+		width: 100%;
+		margin: -20px;
+		padding: 20px;
+	}
 }
 
 .search-no-results {
