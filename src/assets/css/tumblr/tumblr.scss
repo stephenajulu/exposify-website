@@ -285,21 +285,6 @@ br.clear, div.clear {
 	max-width: 502px;
 }
 
-#posts {
-	margin-top: 35px;
-
-	&.no-title-desc.avatar-hidden,
-	&.no-title-desc.avatar-style-hidden,
-	&.no-title-desc.no-image.avatar-hidden {
-		margin-top: 27px;
-	}
-
-	&.no-title-desc.avatar-style-circle:not(.show-nav),
-	&.no-title-desc.avatar-style-square:not(.show-nav) {
-		margin-top: 70px;
-	}
-}
-
 .post-wrapper {
 	background: #fff;
 	border-radius: 4px;
