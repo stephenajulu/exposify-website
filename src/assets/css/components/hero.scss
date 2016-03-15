@@ -18,9 +18,9 @@
 		margin-bottom: 45px;
 	}
 	.hero-content {
-		padding-top: 100px;
-		@media (min-width: 481px) {
-			padding-top: 140px;
+		padding-top: 120px;
+		@media (min-width: 800px) {
+			padding-top: 160px;
 		}
 
 	}
@@ -34,12 +34,6 @@
 	transform: translateX(-50%);
 }
 
-@media (max-width: 991px) {
-	.hero-content h1 {
-		font-size: 42px;
-	}
-}
-
 @media (max-width: 480px) {
 	.hero .btn {
 		display: block;
@@ -49,12 +43,6 @@
 
 	.hero .btn:first-of-type {
 		margin-bottom: 20px;
-	}
-
-	.hero-content h1 {
-		font-size: 20px;
-		font-weight: 700;
-		letter-spacing: 1px
 	}
 
 	.btn-margin-right {
