@@ -12,14 +12,24 @@
 }
 .btn-white {
 	font-size: 13px;
-	border: solid 2px;
+	border: 2px solid white;
 	@include border-radius(40px);
 	display: inline-block;
-	border-color: $txt-light;
+	color: white;
 }
 .btn-white:hover, .btn-white:focus {
-	color: $accent-color;
-	border-color: $accent-color;
+	border-color: white;
+	background: rgba(white, .15);
+}
+.btn-white.btn-fill {
+	border-color: white;
+	color: $secondary-color;
+	background: white;
+	&:hover {
+		background: white;
+		color: $secondary-color;
+		border-color: white;
+	}
 }
 .btn-fill {
 	color: $white-color;
@@ -40,16 +50,16 @@
 }
 .btn-secondary:hover, .btn-secondary:focus {
 	color: $txt-secondary;
-	background-color: $seconday-color;
-	border-color: $seconday-color;
+	background-color: $secondary-color;
+	border-color: $secondary-color;
 }
 .btn-secondary-fill {
-	background-color: $seconday-color;
-	border-color: $seconday-color;
+	background-color: $secondary-color;
+	border-color: $secondary-color;
 }
 .btn-secondary-fill:hover, .btn-secondary-fill:focus {
-	background-color: $seconday-color-hover;
-	border-color: $seconday-color-hover;
+	background-color: $secondary-color-hover;
+	border-color: $secondary-color-hover;
 }
 .btn-small {
 	padding: 8px 40px;

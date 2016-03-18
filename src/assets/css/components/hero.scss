@@ -1,21 +1,24 @@
 .hero {
-	min-height: 550px;
-	background: url('/assets/img/hero.jpg') bottom center;
-	background-size: cover;
 	position: relative;
+	min-height: 550px;
+	background-color: $secondary-color;
+	background-size: cover;
 
 	.down-arrow a {
 		color: $txt-secondary;
 	}
 	h1 {
-		color: $txt-secondary;
 		margin-bottom: 30px;
+		color: white;
 	}
 	p.intro {
-		color: $txt-secondary;
+		color: rgba(white, .8);
 		font-size: 20px;
-		font-weight: 300;
+		font-weight: 500;
 		margin-bottom: 45px;
+	}
+	.btn {
+		font-weight: 600;
 	}
 	.hero-content {
 		padding-top: 120px;
