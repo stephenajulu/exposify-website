@@ -4,6 +4,10 @@ RewriteEngine On
 ### `RewriteCond %{HTTP_HOST} !\.dev$`
 ###  ...to prevent redirecting on local
 
+# redirect direct /main/ request
+RewriteCond %{THE_REQUEST} ^GET\s/main/(.*)?
+RewriteRule ^(.*)$ /$1 [R=301,L]
+
 # redirect to https
 RewriteCond %{HTTP_HOST} !\.dev$
 RewriteCond %{HTTPS} !on
@@ -12,7 +16,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 # redirect to www
 RewriteCond %{HTTP_HOST} !\.dev$
 RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
 # Cross origin access for fonts
 <FilesMatch ".(eot|ttf|otf|woff)">
