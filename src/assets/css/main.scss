@@ -1,13 +1,26 @@
+// COLORS
+$txt-primary: rgba(28,54,83,.6);
+$txt-secondary: #454c5b;
+$txt-accent: #acb1b4;
+
+$accent-color: #4cbcc1;
+$accent-color-light: #5ec2cc;
+
+$secondary-color: #ffca45;
+$secondary-color-light: #ffd15d;
+
+$section-light: #fff;
+$section-dark: #f3f4f8;
+
+$section-padding: 120px 0;
+
+// IMPORTS
 @import "compass";
-@import "settings/colors";
-@import "settings/typography";
-@import "settings/variables";
 @import "base/base";
 @import "objects/buttons";
 @import "objects/etline-font";
 @import "objects/grid";
 @import "objects/sections";
-@import "components/features";
 @import "components/footer";
 @import "components/hero";
 @import "components/intro";

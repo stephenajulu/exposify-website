@@ -7,7 +7,7 @@
 	text-transform: uppercase;
 }
 .btn:hover, .btn:focus {
-	color: $white-color;
+	color: white;
 	border-color: $accent-color;
 	background-color: $accent-color;
 }
@@ -33,7 +33,7 @@
 	}
 }
 .btn-fill {
-	color: $white-color;
+	color: white;
 	border: solid 2px $accent-color;
 	@include border-radius(40px);
 	display: inline-block;
@@ -41,9 +41,9 @@
 	background-color: $accent-color;
 }
 .btn-fill:hover, .btn-fill:focus {
-	color: $white-color;
-	background-color: $accent-color-hover;
-	border-color: $accent-color-hover;
+	color: white;
+	background-color: $accent-color-light;
+	border-color: $accent-color-light;
 }
 .btn-secondary {
 	color: $txt-secondary;
@@ -59,8 +59,8 @@
 	border-color: $secondary-color;
 }
 .btn-secondary-fill:hover, .btn-secondary-fill:focus {
-	background-color: $secondary-color-hover;
-	border-color: $secondary-color-hover;
+	background-color: $secondary-color-light;
+	border-color: $secondary-color-light;
 }
 .btn-small {
 	padding: 8px 40px;
