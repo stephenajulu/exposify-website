@@ -1,73 +1,57 @@
 .btn {
+	display: inline-block;
 	padding: 5px 10px;
+	color: $txt-secondary;
 	font-size: 13px;
-	border: solid 2px;
-	@include border-radius(40px);
-	display: inline-block;
 	text-transform: uppercase;
-}
-.btn:hover, .btn:focus {
-	color: white;
-	border-color: $accent-color;
-	background-color: $accent-color;
-}
-.btn-white {
-	font-size: 13px;
-	border: 2px solid white;
-	@include border-radius(40px);
-	display: inline-block;
-	color: white;
-}
-.btn-white:hover, .btn-white:focus {
-	border-color: white;
-	background: rgba(white, .15);
-}
-.btn-white.btn-fill {
-	border-color: white;
-	color: $secondary-color;
-	background: white;
+	border: solid 2px;
+	border-color: $txt-secondary;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: .4s all;
 	&:hover {
-		background: white;
-		color: $secondary-color;
-		border-color: white;
+		background-color: rgba(white, .4);
+	}
+	&.btn-fill {
+		background-color: $txt-secondary;
+		color: white;
+		&:hover {
+			background-color: lighten($txt-secondary, 10%);
+			border-color: lighten($txt-secondary, 10%);
+		}
 	}
 }
-.btn-fill {
+
+.btn-white {
 	color: white;
-	border: solid 2px $accent-color;
-	@include border-radius(40px);
-	display: inline-block;
-	text-transform: uppercase;
-	background-color: $accent-color;
+	border-color: white;
+	&.btn-fill {
+		color: $txt-secondary;
+		background-color: white;
+		&:hover {
+			background-color: white;
+			border-color: white;
+		}
+	}
 }
-.btn-fill:hover, .btn-fill:focus {
-	color: white;
-	background-color: $accent-color-light;
-	border-color: $accent-color-light;
-}
+
 .btn-secondary {
-	color: $txt-secondary;
-	border-color: $txt-secondary;
-}
-.btn-secondary:hover, .btn-secondary:focus {
-	color: $txt-secondary;
-	background-color: $secondary-color;
+	color: $secondary-color;
 	border-color: $secondary-color;
+	&.btn-fill {
+		color: white;
+		background-color: $secondary-color;
+		&:hover {
+			background-color: $secondary-color-light;
+			border-color: $secondary-color-light;
+		}
+	}
 }
-.btn-secondary-fill {
-	background-color: $secondary-color;
-	border-color: $secondary-color;
-}
-.btn-secondary-fill:hover, .btn-secondary-fill:focus {
-	background-color: $secondary-color-light;
-	border-color: $secondary-color-light;
-}
-.btn-small {
-	padding: 8px 40px;
-}
+
 .btn-large {
 	padding: 15px 40px;
 }
+
 .btn-margin-right {
 	margin-right: 20px;
 }

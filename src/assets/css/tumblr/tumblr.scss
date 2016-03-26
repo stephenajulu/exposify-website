@@ -563,8 +563,7 @@ br.clear, div.clear {
 
 .read_more {
 	@extend .btn;
-	@extend .btn-secondary;
-	@extend .btn-secondary-fill;
+	@extend .btn-secondary.btn-fill;
 	padding: 10px 20px;
 	text-decoration: none !important;
 }
