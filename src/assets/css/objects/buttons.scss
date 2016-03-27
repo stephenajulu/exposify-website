@@ -10,7 +10,8 @@
 	cursor: pointer;
 	transition: .4s all;
 	&:hover {
-		background-color: rgba(white, .4);
+		color: $txt-secondary;
+		background-color: rgba(white, .2);
 	}
 	&.btn-fill {
 		background-color: $txt-secondary;
@@ -25,6 +26,9 @@
 .btn-white {
 	color: white;
 	border-color: white;
+	&:hover {
+		color: white;
+	}
 	&.btn-fill {
 		color: $txt-secondary;
 		background-color: white;
@@ -38,6 +42,9 @@
 .btn-secondary {
 	color: $secondary-color;
 	border-color: $secondary-color;
+	&:hover {
+		color: $secondary-color;
+	}
 	&.btn-fill {
 		color: white;
 		background-color: $secondary-color;

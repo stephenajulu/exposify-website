@@ -20,6 +20,9 @@
 	.btn {
 		font-weight: 600;
 	}
+	.btn-white.btn-fill {
+		color: $secondary-color;
+	}
 	.hero-content {
 		padding-top: 120px;
 		@media (min-width: 800px) {
