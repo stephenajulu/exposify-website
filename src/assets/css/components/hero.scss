@@ -1,7 +1,7 @@
 .hero {
 	position: relative;
 	min-height: 550px;
-	background-color: $secondary-color;
+	background-color: $accent-color;
 	background-size: cover;
 
 	.down-arrow a {
@@ -21,7 +21,7 @@
 		font-weight: 600;
 	}
 	.btn-white.btn-fill {
-		color: $secondary-color;
+		color: $accent-color;
 	}
 	.hero-content {
 		padding-top: 120px;

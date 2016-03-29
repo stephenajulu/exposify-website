@@ -9,7 +9,7 @@ body {
 }
 
 a {
-	color: $accent-color;
+	color: $primary-color;
 	text-decoration: none;
 	transition-timing-function: ease;
 	transition-duration: 200ms;
@@ -17,7 +17,7 @@ a {
 }
 
 a:hover, a:focus {
-	color: $accent-color-light;
+	color: $primary-color-light;
 	text-decoration: none;
 }
 

@@ -40,18 +40,18 @@
 	}
 }
 
-.btn-secondary {
-	color: $secondary-color;
-	border-color: $secondary-color;
+.btn-accent {
+	color: $accent-color;
+	border-color: $accent-color;
 	&:hover {
-		color: $secondary-color;
+		color: $accent-color;
 	}
 	&.btn-fill {
 		color: white;
-		background-color: $secondary-color;
+		background-color: $accent-color;
 		&:hover {
-			background-color: $secondary-color-light;
-			border-color: $secondary-color-light;
+			background-color: $accent-color-light;
+			border-color: $accent-color-light;
 		}
 	}
 }
