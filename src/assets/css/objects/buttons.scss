@@ -40,6 +40,22 @@
 	}
 }
 
+.btn-primary {
+	color: $primary-color;
+	border-color: $primary-color;
+	&:hover {
+		color: $primary-color;
+	}
+	&.btn-fill {
+		color: white;
+		background-color: $primary-color;
+		&:hover {
+			background-color: $primary-color-light;
+			border-color: $primary-color-light;
+		}
+	}
+}
+
 .btn-accent {
 	color: $accent-color;
 	border-color: $accent-color;
@@ -54,6 +70,10 @@
 			border-color: $accent-color-light;
 		}
 	}
+}
+
+.btn-square {
+	border-radius: 3px;
 }
 
 .btn-large {

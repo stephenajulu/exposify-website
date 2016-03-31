@@ -3,7 +3,7 @@ $txt-primary: rgba(28,54,83,.6);
 $txt-secondary: #454c5b;
 $txt-accent: #acb1b4;
 
-$primary-color: #4cbcc1;
+$primary-color: #53bac5;
 $primary-color-light: #5ec2cc;
 
 $accent-color: #ffca45;
@@ -17,8 +17,10 @@ $section-padding: 120px 0;
 // IMPORTS
 @import "compass";
 @import "base/base";
+@import "objects/box";
 @import "objects/buttons";
 @import "objects/etline-font";
+@import "objects/form";
 @import "objects/grid";
 @import "objects/sections";
 @import "components/footer";

@@ -1,7 +1,8 @@
 .hero {
 	position: relative;
-	min-height: 550px;
-	background-color: $accent-color;
+	min-height: 700px;
+	background-color: $primary-color;
+	background-image: url('/assets/img/hero.jpg');
 	background-size: cover;
 
 	.down-arrow a {
@@ -15,7 +16,6 @@
 		color: rgba(white, .8);
 		font-size: 20px;
 		font-weight: 500;
-		margin-bottom: 45px;
 	}
 	.btn {
 		font-weight: 600;
@@ -24,11 +24,38 @@
 		color: $accent-color;
 	}
 	.hero-content {
-		padding-top: 120px;
+		padding-top: 180px;
 		@media (min-width: 800px) {
-			padding-top: 160px;
+			padding-top: 220px;
+			padding-right: 20px;
 		}
 
+	}
+	.box {
+		margin: 20px 0;
+		@media(min-width: 40.063em) {
+			margin-top: 160px;
+		}
+		@media (min-width: 1000px) {
+			.box-title {
+				padding: 30px;
+			}
+			.box-content {
+				padding: 40px;
+				padding-top: 30px;
+			}
+		}
+		.field {
+			margin: 0 auto 10px;
+			i.fa {
+				color: $accent-color;
+			}
+		}
+		.btn {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+		}
 	}
 }
 .down-arrow {
