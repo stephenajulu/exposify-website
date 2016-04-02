@@ -295,11 +295,6 @@ br.clear, div.clear {
 	border: 1px solid #eee;
 	border: 1px solid rgba(0, 0, 0, .08);
 	margin: 20px 0;
-
-	a {
-		color: inherit;
-		text-decoration: underline;
-	}
 }
 
 .reblog-header {
@@ -563,9 +558,10 @@ br.clear, div.clear {
 
 .read_more {
 	@extend .btn;
+	@extend .btn.btn-fill;
+	@extend .btn-accent;
 	@extend .btn-accent.btn-fill;
-	padding: 10px 20px;
-	text-decoration: none !important;
+	@extend .btn-large;
 }
 
 .post img {
