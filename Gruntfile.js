@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 					compass: true
 				},
 				files: {
-					'dist/assets/css/main.css': 'src/assets/css/main.scss'
+					'dist/assets/css/main.css': 'src/assets/css/main.sass'
 				}
 			}
 		},
