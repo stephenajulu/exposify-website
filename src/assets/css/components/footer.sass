@@ -1,22 +1,85 @@
-.main-footer
-  padding: 40px 0
-  background: white
+.footer
+	position: relative
+	z-index: 20
+	padding-top: 20px
+	padding-bottom: 120px
+	margin-top: 20%
+	color: white
+	background: $dark1
 
-.main-footer-socials
-  display: block
-  margin-top: 10px
+	&:before
+		content: ""
+		position: absolute
+		bottom: 100%
+		width: 100%
+		padding-top: 20%
+		background-image: url(/assets/img/background_footer.svg)
+		background-position: -4px 100%
+		background-size: calc(100% + 8px)
+		background-repeat: no-repeat
 
-.social-circle
-  display: inline-block
-  width: 30px
-  height: 30px
-  color: white
-  background-color: $primary-color
-  border-radius: 50%
+	&.footer-light-transition:before
+		background-image: url(/assets/img/background_footer_light_transition.svg)
 
-  .fa
-    vertical-align: sub
+	a
+		color: $dark3
+		&:hover
+			color: $dark4
 
-  &:hover
-    color: inherit
-    background-color: lighten($primary-color, 10%)
+.footer-logo
+	height: 60px
+	margin-left: -9px
+
+.footer-copy
+	margin-bottom: 3em
+	color: $dark3
+
+	.fa.fa-bolt
+		margin: 0 10px
+		color: $accent
+
+.footer-twitter
+	position: relative
+
+	.fa.fa-twitter
+		position: absolute
+		top: -12px
+		left: -42px
+		padding: 10px
+		color: #55acee
+		font-size: 1.5em
+
+.footer-heading
+	font-size: 1.2em
+	font-weight: 400
+
+.footer-list
+	padding: 0
+	margin: 0
+
+	li
+		margin-bottom: .3em
+		list-style: none
+
+@media #{$small-only}
+	.footer
+		padding-bottom: 80px
+
+	.footer-logo
+		margin-bottom: 1em
+
+	.footer-right-section .column
+		margin-bottom: 3em
+		&:last-child
+			margin-bottom: 0
+
+@media #{$medium-only}
+	.footer-right-section
+		padding-left: 74px
+
+@media #{$medium-up}
+	.footer-left-section
+		margin-top: -10px
+
+	.footer-copy
+		margin-left: 44px

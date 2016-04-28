@@ -1,0 +1,79 @@
+.btn
+	display: inline-block
+	padding: 5px 10px
+	color: $dark1
+	font-size: 13px
+	text-transform: uppercase
+	background: none
+	border: solid 2px
+	border-color: $dark1
+	border-radius: 100px
+	cursor: pointer
+	transition: .4s all
+
+	&:hover
+		color: $dark1
+		background-color: rgba(white, 0.2)
+
+	&.btn-fill
+		background-color: $dark1
+		color: white
+
+		&:hover
+			background-color: lighten($dark1, 10%)
+			border-color: lighten($dark1, 10%)
+
+.btn-white
+	color: white
+	border-color: white
+
+	&:hover
+		color: white
+
+	&.btn-fill
+		color: $dark1
+		background-color: white
+
+		&:hover
+			background-color: white
+			border-color: white
+
+.btn-primary
+	color: $primary
+	border-color: $primary
+
+	&:hover
+		color: $primary
+
+	&.btn-fill
+		color: white
+		background-color: $primary
+
+		&:hover
+			background-color: $primary-light
+			border-color: $primary-light
+
+.btn-accent
+	color: $accent
+	border-color: $accent
+
+	&:hover
+		color: $accent
+
+	&.btn-fill
+		color: white
+		background-color: $accent
+
+		&:hover
+			color: white
+			background-color: $accent-light
+			border-color: $accent-light
+
+.btn-square
+	border-radius: 3px
+
+.btn-large
+	padding: 15px 40px
+
+.btn-margin-right
+	margin-right: 20px

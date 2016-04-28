@@ -1,0 +1,80 @@
+.offers-wrapper,
+.connected-wrapper
+	text-align: center
+
+.connected-wrapper
+	background-color: $light
+
+.info-tagline
+	margin: 1.6em 0 1.2em
+	font-size: .9em
+	font-weight: 600
+	line-height: 1
+
+.info-heading
+	margin: .4em 0
+	font-size: 1.6em
+
+@media #{$small-only}
+	.offers-wrapper
+		padding-top: 40px
+		padding-bottom: 10px
+
+	.connected-wrapper
+		padding-top: 10px
+		padding-bottom: 40px
+
+	.offers-image,
+	.connected-image
+		width: 100%
+		max-width: 300px
+
+	.offers-blurb,
+	.connected-blurb
+		max-width: 400px
+		margin: 0 auto
+
+@media #{$small-only}, #{$xlarge-up}
+	.offers-wrapper
+		padding-bottom: 10%
+		background-image: url(/assets/img/background_skewed.svg)
+		background-position: -4px bottom
+		background-size: calc(100% + 8px)
+		background-repeat: no-repeat
+
+@media #{$medium-only}, #{$large-only}
+	.info > .row
+		display: flex
+
+	.offers-wrapper,
+	.connected-wrapper
+		padding-top: 50px
+		padding-bottom: 50px
+
+	.connected-image
+		width: 90%
+
+@media #{$xlarge-up}
+	.offers-wrapper
+		padding-top: 60px
+
+	.connected-wrapper
+		padding-bottom: 60px
+
+	.offers-wrapper .offers,
+	.connected-wrapper .connected
+		width: 100%
+		max-width: 1000px
+		margin: 0 auto
+
+	.offers-blurb
+		position: relative
+		top: 140px
+		text-align: left
+		transform: translateY(-50%)
+
+	.connected-blurb
+		position: relative
+		top: 180px
+		text-align: left
+		transform: translateY(-50%)

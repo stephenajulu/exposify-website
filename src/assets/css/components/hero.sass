@@ -1,76 +1,49 @@
 .hero
-  position: relative
-  min-height: 700px
-  background-color: $primary-color
-  background-image: url("/assets/img/hero.jpg")
-  background-size: cover
+	padding: 100px 0 40px
+	background-color: $primary
+	background-image: url(/assets/img/background_hero.png)
+	background-size: cover
 
-  .down-arrow a
-    color: $txt-secondary
+.hero-info
+	h1
+		color: inherit
+	p
+		line-height: 1.8
 
-  h1
-    margin-bottom: 30px
-    color: white
+	@media #{$small-only}, #{$medium-only}
+		h1, p
+			max-width: 580px
+			margin-left: auto
+			margin-right: auto
+			text-align: center
 
-  p.intro
-    color: rgba(white, 0.8)
-    font-size: 20px
-    font-weight: 500
+		h1
+			font-size: 1.5em
 
-  .btn
-    font-weight: 600
+		p
+			margin-bottom: 1.8em
 
-  .btn-white.btn-fill
-    color: $accent-color
 
-  .hero-content
-    padding-top: 180px
+@media #{$large-only}
+	.hero-cta
+		.box-title
+			padding: 20px
 
-    @media (min-width: 800px)
-      padding-top: 220px
-      padding-right: 20px
+		.box-content
+			padding: 20px
 
-  .box
-    margin: 20px 0
+@media #{$large-up}
+	.hero
+		min-height: 90vh
 
-    @media (min-width: 40.063em)
-      margin-top: 160px
+	.hero-info
+		margin-top: 4em
 
-    @media (min-width: 1000px)
-      .box-title
-        padding: 30px
+	.hero-cta
+		margin-top: 5em
+		.box
+			margin-right: 0
 
-      .box-content
-        padding: 40px
-        padding-top: 30px
-
-    .field
-      margin: 0 auto 10px
-
-      i.fa
-        color: $accent-color
-
-    .btn
-      display: block
-      width: 100%
-      margin: 0 auto
-
-.down-arrow
-  color: #fff
-  font-size: 30px
-  position: absolute
-  bottom: 30px
-  left: 50%
-  transform: translateX(-50%)
-
-@media (max-width: 480px)
-  .hero .btn
-    display: block
-    width: 80%
-    margin: 0 auto
-
-  .hero .btn:first-of-type
-    margin-bottom: 20px
-
-  .btn-margin-right
-    margin-right: 0px
+@media #{$xlarge-up}
+	.hero-info
+		margin-top: 7em
