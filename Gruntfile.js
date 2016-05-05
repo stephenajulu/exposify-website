@@ -87,6 +87,11 @@ module.exports = function(grunt) {
 				tasks: 'copy'
 			},
 
+			php: {
+				files: 'src/**/*.php',
+				tasks: 'copy'
+			},
+
 			jade: {
 				files: 'src/**/*.jade',
 				tasks: 'jade'
@@ -115,7 +120,8 @@ module.exports = function(grunt) {
 		syncdeploy: {
 			main: {
 				cwd: 'dist/',
-				src: ['**/*', '.htaccess']
+				src: ['**/*', '.htaccess'],
+				keepFiles: ['php/config.php']
 			},
 			options: {
 				removeEmpty: true,
