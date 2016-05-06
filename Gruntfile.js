@@ -76,6 +76,28 @@ module.exports = function(grunt) {
 			}
 		},
 
+		concat: {
+			main: {
+				options: {
+					sourceMap: true
+				},
+				src: 'src/assets/js/**/*.js',
+				dest: 'dist/assets/js/main.js',
+			}
+		},
+
+		uglify: {
+			main: {
+				options: {
+					compress: {
+						drop_console: true
+					}
+				},
+				src: 'dist/assets/js/main.js',
+				dest: 'dist/assets/js/main.js'
+			}
+		},
+
 		watch: {
 			options: {
 				livereload: true,
@@ -140,13 +162,15 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sync-deploy');
 
 	grunt.option('config', 'production');
 
-	grunt.registerTask('build',      ['copy', 'sass', 'autoprefixer']);
-	grunt.registerTask('build-prod', ['build', 'htmlmin']);
+	grunt.registerTask('build',      ['copy', 'sass', 'autoprefixer', 'concat']);
+	grunt.registerTask('build-prod', ['build', 'htmlmin', 'uglify']);
 	grunt.registerTask('deploy',     ['build-prod', 'syncdeploy']);
 	grunt.registerTask('default',    ['build', 'watch']);
 
