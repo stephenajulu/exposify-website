@@ -54,7 +54,9 @@ $modules: () !default
 		margin: 0
 		max-width: none
 	@else
-		width: 90%
+		width: 95%
+		@media(min-width: 340px)
+			width: 90%
 		margin-#{$default-float}: auto
 		margin-#{$opposite-direction}: auto
 		margin-top: 0
