@@ -21,4 +21,7 @@ if ($config['segment_write_key']) {
 	]);
 }
 
-header('location:javascript://history.go(-1)');
+// if it isn't an ajax request
+if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+	header('location:javascript://history.go(-1)');
+}

@@ -102,6 +102,11 @@ module.exports = function(grunt) {
 				tasks: 'sass'
 			},
 
+			js: {
+				files: 'src/assets/js/**/*.js',
+				tasks: 'copy'
+			},
+
 			img: {
 				files: 'src/assets/img/**/*.{jpg,png}',
 				tasks: 'copy'
