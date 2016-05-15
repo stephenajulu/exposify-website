@@ -1,8 +1,12 @@
 .hero
-	padding: 100px 0 40px
+	position: relative
+	padding: 120px 0 70px
 	background-color: $primary
 	background-image: url(/assets/img/background_hero.png)
 	background-size: cover
+
+	@media #{$large-up}
+		padding-bottom: 120px
 
 .hero-info
 	h1
@@ -27,6 +31,28 @@
 		h1
 			font-size: 1.6em
 
+.hero-scroll-down
+	position: absolute
+	bottom: 10px
+	left: 50%
+	left: calc(50% - 25px)
+	display: block
+	padding: 10px
+
+	.fa
+		width: 30px
+		font-size: 30px
+		text-align: center
+		color: white
+
+	@media #{$large-up}
+		bottom: 25px
+		left: calc(50% - 27px)
+
+		.fa
+			width: 35px
+			font-size: 35px
+
 @media #{$large-only}
 	.hero-cta
 		.box-title
@@ -36,17 +62,14 @@
 			padding: 20px
 
 @media #{$large-up}
-	.hero
-		min-height: 90vh
-
 	.hero-info
-		margin-top: 4em
+		margin-top: 1em
 
 	.hero-cta
-		margin-top: 5em
+		margin-top: 2em
 		.box
 			margin-right: 0
 
 @media #{$xlarge-up}
 	.hero-info
-		margin-top: 7em
+		margin-top: 4.5em
