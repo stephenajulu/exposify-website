@@ -106,12 +106,12 @@ module.exports = function(grunt) {
 
 			html: {
 				files: 'src/**/*.html',
-				tasks: 'copy'
+				tasks: 'newer:copy'
 			},
 
 			php: {
 				files: 'src/**/*.php',
-				tasks: 'copy'
+				tasks: 'newer:copy'
 			},
 
 			jade: {
@@ -126,12 +126,12 @@ module.exports = function(grunt) {
 
 			js: {
 				files: 'src/assets/js/**/*.js',
-				tasks: 'copy'
+				tasks: ['copy', 'concat']
 			},
 
 			img: {
 				files: 'src/assets/img/**/*.{jpg,png}',
-				tasks: 'copy'
+				tasks: 'newer:copy'
 			}
 		},
 
@@ -165,12 +165,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-sync-deploy');
 
 	grunt.option('config', 'production');
 
-	grunt.registerTask('build',      ['copy', 'sass', 'autoprefixer', 'concat']);
-	grunt.registerTask('build-prod', ['build', 'htmlmin', 'uglify']);
+	grunt.registerTask('build',      ['newer:copy', 'newer:sass', 'newer:autoprefixer', 'newer:concat']);
+	grunt.registerTask('build-prod', ['build', 'newer:htmlmin', 'newer:uglify']);
 	grunt.registerTask('deploy',     ['build-prod', 'syncdeploy']);
 	grunt.registerTask('default',    ['build', 'watch']);
 
