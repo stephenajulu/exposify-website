@@ -1,36 +1,55 @@
 .hero
 	position: relative
-	padding: 120px 0 70px
-	background-color: $primary
-	background-image: url(/assets/img/background_hero.png)
+	padding-top: 130px
+	padding-bottom: 100px
+	background-color: $dark1
+	background-image: url(/assets/img/background_hero.svg), linear-gradient($dark1, mix($dark1, $primary, 85%))
+	background-position: center bottom
 	background-size: cover
 
 	@media #{$large-up}
-		padding-bottom: 120px
+		padding-top: 170px
+		padding-bottom: 180px
 
-.hero-info
-	h1
+.hero-title, .hero-value
+	text-align: center
+
+.hero-title
+	color: inherit
+	font-size: 1.5em
+	@media #{$medium-up}
+		font-size: 2.1em
+	@media #{$xlarge-up}
+		font-size: 3em
+
+.hero-value
+	max-width: 720px
+	margin: 0 auto 1.8em
+	color: rgba(white, 0.5)
+	line-height: 1.8
+	@media #{$medium-up}
+		font-size: 1.2em
+
+.hero-cta, .hero-cta-response
+	max-width: 500px
+	margin: 0 auto
+
+.hero-cta-response
+	margin-top: 1.2em
+
+.hero-form.success
+	max-width: 500px
+	padding: 30px
+	margin: 0 auto
+	color: white
+	background-color: rgba(white, .3)
+	border-radius: 5px
+	.title
 		color: inherit
-		font-size: 1.3em
-		@media #{$medium-up}
-			font-size: 1.8em
-		@media #{$xlarge-up}
-			font-size: 2.1em
-	p
-		line-height: 1.8
-
-	@media #{$small-only}, #{$medium-only}
-		h1, p
-			max-width: 580px
-			margin-left: auto
-			margin-right: auto
-			text-align: center
-		p
-			margin-bottom: 1.8em
 
 .hero-scroll-down
 	position: absolute
-	bottom: 10px
+	bottom: 13px
 	left: 50%
 	left: calc(50% - 25px)
 	display: block
@@ -43,30 +62,9 @@
 		color: white
 
 	@media #{$large-up}
-		bottom: 25px
+		bottom: 15px
 		left: calc(50% - 27px)
 
 		.fa
 			width: 35px
 			font-size: 35px
-
-@media #{$large-only}
-	.hero-cta
-		.box-title
-			padding: 20px
-
-		.box-content
-			padding: 20px
-
-@media #{$large-up}
-	.hero-info
-		margin-top: 1em
-
-	.hero-cta
-		margin-top: 2em
-		.box
-			margin-right: 0
-
-@media #{$xlarge-up}
-	.hero-info
-		margin-top: 4.5em

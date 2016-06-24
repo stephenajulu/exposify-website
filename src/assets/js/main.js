@@ -39,15 +39,16 @@ forEach(ajaxForms, function(form) {
 
 		request.onload = function() {
 			if (this.status == 200) {
-				form.innerHTML = '<h3 class="no-margin-top upper rounded-font">Du bist dabei! <span class="fa fa-rocket accent"></span></h3><p><b>YEAH!</b> Du bist jetzt auf unserer Warteliste. Wir melden uns bei Dir so früh wie möglich.</p><p class="no-margin-bottom"><a class="btn btn-primary btn-fill" href="http://blog.exposify.de">Sieh Dir unseren Makler Blog an</a></p>';
+				form.innerHTML = '<h3 class="title no-margin-top upper">Sie sind dabei! <span class="fa fa-rocket accent"></span></h3><p><b>YEAH!</b> Danke für die Anmeldung. Wir melden uns bei Ihnen innerhalb von 24 Stunden.</p><p class="no-margin-bottom"><a class="btn btn-primary btn-fill" href="http://blog.exposify.de">Sehen Sie sich unseren Makler Blog an</a></p>';
+				form.classList.add('success');
 			} else {
-				response.innerHTML = 'Hier stimmt noch was nicht. Überprüfe die Email Adresse.';
+				response.innerHTML = 'Hier stimmt noch was nicht. Überprüfen Sie die Email Adresse.';
 				response.classList.add('error');
 			}
 		};
 
 		request.onerror = function() {
-			response.innerHTML = 'Wir können das so nicht abschicken. Überprüfe Deine Internetverbindung und probiere es nochmal.';
+			response.innerHTML = 'Wir können das so nicht abschicken. Überprüfen Sie Ihre Internetverbindung und probieren es erneut.';
 			response.classList.add('error');
 		};
 

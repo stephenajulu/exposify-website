@@ -6,6 +6,8 @@
 	text-align: center
 	text-transform: uppercase
 	background: none
+	background-repeat: no-repeat
+	box-shadow: inset 0 1px 0 rgba(white, .3)
 	border: solid 2px
 	border-color: $dark1
 	border-radius: 100px
@@ -17,12 +19,13 @@
 		background-color: rgba(white, 0.2)
 
 	&.btn-fill
-		background-color: $dark1
 		color: white
+		background-color: $dark1
+		border: none
+		font-weight: bold
 
 		&:hover
-			background-color: lighten($dark1, 10%)
-			border-color: lighten($dark1, 10%)
+			background-position-y: -30px
 
 .btn-white
 	color: white
@@ -37,7 +40,6 @@
 
 		&:hover
 			background-color: white
-			border-color: white
 
 .btn-primary
 	color: $primary
@@ -48,11 +50,8 @@
 
 	&.btn-fill
 		color: white
-		background-color: $primary
-
-		&:hover
-			background-color: $primary-light
-			border-color: $primary-light
+		background-color: darken($primary, 8%)
+		background-image: linear-gradient(lighten($primary, 3%), darken($primary, 8%))
 
 .btn-accent
 	color: $accent
@@ -63,12 +62,8 @@
 
 	&.btn-fill
 		color: white
-		background-color: $accent
-
-		&:hover
-			color: white
-			background-color: $accent-light
-			border-color: $accent-light
+		background-color: darken($accent, 8%)
+		background-image: linear-gradient(lighten($accent, 3%), darken($accent, 8%))
 
 .btn-square
 	border-radius: 3px
