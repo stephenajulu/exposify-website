@@ -14,6 +14,12 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin:400,700">
 		<link rel="stylesheet" href="/assets/css/main.css">
+
+		<noscript>
+			<style>
+				.animate-in { visibility: visible; }
+			</style>
+		</noscript>
 	</head>
 <!--
 
@@ -49,9 +55,9 @@ jobs@exposify.de
 		<section class="hero">
 			<div class="row">
 				<div class="large-12 column white">
-					<h1 class="hero-title">Geben Sie Ihren Immobilien <span class="line-break">ein neues Zuhause.</span></h1>
-					<p class="hero-value">Wir helfen Maklerteams Ihre Immobilienangebote optimiert für Suchmaschinen auf der Firmenwebsite einzubinden. <span class="line-break">Melden Sie sich kostenlos an!</span></p>
-					<form class="hero-form ajax" action="/php/signup.php" method="post">
+					<h1 class="hero-title animate-in" id="hero-title">Geben Sie Ihren Immobilien <span class="line-break">ein neues Zuhause.</span></h1>
+					<p class="hero-value animate-in" id="hero-value">Wir helfen Maklerteams Ihre Immobilienangebote optimiert für Suchmaschinen auf der Firmenwebsite einzubinden. <span class="line-break">Melden Sie sich kostenlos an!</span></p>
+					<form class="hero-form ajax animate-in" id="hero-form" action="/php/signup.php" method="post">
 						<div class="btn-field hero-cta">
 							<input class="btn-field-input" type="email" name="email" placeholder="Email Adresse" required>
 							<button class="btn btn-square btn-accent btn-fill btn-field-btn" type="submit">Los geht's</button>
@@ -151,6 +157,15 @@ jobs@exposify.de
 		</footer>
 
 		<script src="/assets/js/main.js"></script>
+		<script>
+			setTimeout(function() {
+				document.getElementById('hero-title').classList.add('fade-up');
+				document.getElementById('hero-value').classList.add('fade-up');
+			}, 500);
+			setTimeout(function() {
+				document.getElementById('hero-form').classList.add('fade');
+			}, 1500);
+		</script>
 		<script>
 			!function() {var t;return t = window.driftt = window.drift = window.driftt || [], t.init ? void 0 : t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,t.methods = [ "identify", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],t.factory = function(e) {return function() {var n;return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;};}, t.methods.forEach(function(e) {t[e] = t.factory(e);}), t.load = function(t) {var e, n, o, r;e = 3e5, r = Math.ceil(new Date() / e) * e, o = document.createElement("script"),o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + r + "/" + t + ".js",n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);});}();
 			drift.SNIPPET_VERSION = '0.2.0'
