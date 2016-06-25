@@ -4,8 +4,8 @@ $config = include('config.php');
 $email = $_POST['email'];
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-	echo 'Keine gültige E-Mail Adresse.';
 	http_response_code(400);
+	echo 'Keine gültige Email Adresse.';
 	exit;
 }
 
