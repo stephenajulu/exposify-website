@@ -130,7 +130,7 @@ module.exports = function(grunt) {
 			},
 
 			img: {
-				files: 'src/assets/img/**/*.{jpg,png}',
+				files: 'src/assets/img/**/*.{jpg,png,svg}',
 				tasks: 'newer:copy'
 			}
 		},
