@@ -5,7 +5,6 @@
 	padding-bottom: 120px
 	margin-top: 20%
 	color: white
-	background: $dark1
 
 	&:before
 		content: ""
@@ -13,7 +12,6 @@
 		bottom: 100%
 		width: 100%
 		padding-top: 20%
-		background-image: url(/assets/img/background_footer.svg)
 		background-position: -4px 100%
 		background-size: calc(100% + 8px)
 		background-repeat: no-repeat
@@ -21,13 +19,24 @@
 		// fix 1px spaced bar
 		transform: translateY(1px)
 
-	&.footer-light-transition:before
-		background-image: url(/assets/img/background_footer_light_transition.svg)
-
 	a
 		color: $dark3
 		&:hover
 			color: $dark4
+
+.footer
+	background-color: $dark1
+	&:before
+		background-image: url(/assets/img/footer_background_dark.svg)
+	&.footer-transition-light:before
+		background-image: url(/assets/img/footer_background_dark_transition_light.svg)
+
+.footer.footer-light
+	background-color: white
+	&:before
+		background-image: url(/assets/img/footer_background_light.svg)
+	&.footer-transition-light:before
+		background-image: url(/assets/img/footer_background_light_transition_light.svg)
 
 .footer-logo
 	height: 60px
@@ -67,6 +76,9 @@
 	li
 		margin-bottom: .3em
 		list-style: none
+
+.before-footer
+	margin-bottom: -20%
 
 @media #{$small-only}
 	.footer
