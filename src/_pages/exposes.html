@@ -23,7 +23,7 @@
 				<div class="small-12 column">
 					<a href="/"><img class="header-logo" src="/assets/img/exposify_logo_simple_white.svg" alt="Exposify"></a>
 					<nav class="header-nav">
-						<a class="btn btn-white btn-square" href="/#signup">Anmelden</a>
+						<a class="btn btn-white btn-square js-modal-toggle" href="/#signup">Anmelden</a>
 					</nav>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 						Nie wieder Textvorlagen!<br>
 						Machen Sie Ihr eigenes Designer-Exposé <span class="line-break">für Ihre Kunden, blitzschnell und individuell.</span>
 					</p>
-					<a class="center btn btn-large btn-square btn-accent btn-fill" href="/">Kostenlos starten</a>
+					<a class="center btn btn-large btn-square btn-accent btn-fill js-modal-toggle" href="/#signup">Kostenlos starten</a>
 				</div>
 				<div class="large-7 column">
 					<img class="hero-expose-img" src="/assets/img/exposes.png" alt="">
@@ -85,7 +85,7 @@
 							<li><i class="fa fa-check"></i> Grundlegender Support</li>
 						</ul>
 						<div class="box-content">
-							<a class="pricing-cta btn btn-large btn-square btn-accent btn-fill" href="/">Los geht's <i class="fa fa-arrow-circle-right"></i></a>
+							<a class="pricing-cta btn btn-large btn-square btn-accent btn-fill js-modal-toggle" href="/#signup">Los geht's <i class="fa fa-arrow-circle-right"></i></a>
 							<p class="pricing-info small">Keine versteckten Kosten, versprochen. Allerdings bieten wir kostenpflichtige Erweiterungen an.</p>
 						</div>
 
@@ -127,5 +127,24 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="modal-overlay" id="modal-overlay"></div>
+
+		<div class="modal box">
+			<div class="box-action"><i class="fa fa-close js-modal-toggle"></i></div>
+			<form class="box-content ajax" action="https://beta.exposify.de/verwaltung/willkommen-senden" method="post">
+				<h2 class="no-margin-top">Los geht's</h2>
+				<p>
+					Sehr gut, an welche Email Adresse sollen wir Ihre Einladung für Exposify senden?
+				</p>
+				<div class="field" style="margin-bottom: .8em;">
+					<i class="accent field-icon fa fa-envelope"></i>
+					<input class="field-input field-input-accent" type="email" name="email" placeholder="Email Adresse" required>
+				</div>
+				<div class="small response" style="margin: 1.2em 0;"></div>
+				<button class="btn btn-accent btn-fill btn-square btn-large btn-bold full-width" type="submit">Kostenlos starten</button>
+			</form>
+		</div>
+		<script src="/assets/js/main.js"></script>
 	</body>
 </html>

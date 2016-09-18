@@ -17,8 +17,17 @@ function objectToUrlString(object) {
 	return encodedString;
 };
 
-var ajaxForms = document.querySelectorAll('.ajax'),
-	request   = new XMLHttpRequest();
+var ajaxForms        = document.querySelectorAll('.ajax'),
+    modalOpenButtons = document.querySelectorAll('.js-modal-toggle'),
+    htmlEl           = document.querySelector('html'),
+    request          = new XMLHttpRequest();
+
+forEach(modalOpenButtons, function(button) {
+	button.addEventListener('click', function(e) {
+		htmlEl.classList.toggle('open-modal');
+		e.preventDefault();
+	});
+});
 
 forEach(ajaxForms, function(form) {
 	form.addEventListener('submit', function(e) {
@@ -36,6 +45,7 @@ forEach(ajaxForms, function(form) {
 
 		request.open(method, action, true);
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
 		request.onload = function() {
 			if (this.status == 200) {

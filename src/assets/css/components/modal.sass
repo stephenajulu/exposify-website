@@ -1,0 +1,25 @@
+html.open-modal
+	overflow: hidden
+	.modal-overlay
+		display: block
+	.modal
+		display: block
+
+.modal-overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 1000
+	display: none
+	background: rgba(black, .5)
+
+.modal
+	position: fixed
+	top: 50%
+	left: 50%
+	z-index: 1100
+	display: none
+	width: 80%
+	transform: translateX(-50%) translateY(-50%)
