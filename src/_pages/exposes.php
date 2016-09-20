@@ -46,6 +46,15 @@
 			<a class="hero-scroll-down" href="#info"><i class="fa fa-angle-down"></i></a>
 		</section>
 
+		<section class="partner">
+			<div class="row">
+				<div class="large-12 column">
+					<div class="partner-text">In Partnerschaft mit:</div>
+					<a target="_blank" href="https://www.hausgold.de"><img class="partner-logo" src="/assets/img/hausgold_logo.svg" alt="Hausgold"></a>
+				</div>
+			</div>
+		</section>
+
 		<section class="process">
 			<div class="row">
 				<div class="process-step large-4 column">
