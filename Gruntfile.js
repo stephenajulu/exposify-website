@@ -20,14 +20,14 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: 'src/_pages/',
-						src: '**/*.html',
+						src: ['**/*.html', '**/*.php'],
 						dest: 'dist/',
 						rename: function(dest, src) {
-							if (src.indexOf('index.html') == -1) {
-								return dest + src.replace('.html', '/index.html');
-							} else {
-								return dest + src;
+							if (src.indexOf('index.php') == -1 || src.indexOf('index.html') == -1) {
+								src = src.replace('.html', '/index.html')
+								src = src.replace('.php', '/index.php')
 							}
+							return dest + src;
 						}
 					}
 				]

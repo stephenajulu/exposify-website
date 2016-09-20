@@ -133,6 +133,7 @@
 		<div class="modal box">
 			<div class="box-action"><i class="fa fa-close js-modal-toggle"></i></div>
 			<form class="box-content ajax" action="https://beta.exposify.de/verwaltung/willkommen-senden" method="post">
+				<input type="hidden" name="referral" value="<?php echo htmlspecialchars($_GET['ref']); ?>">
 				<h2 class="no-margin-top">Los geht's</h2>
 				<p>
 					Sehr gut, an welche Email Adresse sollen wir Ihre Einladung für Exposify senden?
