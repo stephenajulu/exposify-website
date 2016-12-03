@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<title>Exposify Pro</title>
+		<link rel="stylesheet" href="/assets/css/pro.css">
+	</head>
+	<body>
+		<main class="main-content">
+			<div class="launch-info">
+				<h1 class="exposify-pro">Exposify <span class="pro">Pro</span></h1>
+				<p>Tragen Sie sich ein, um eine Mail zu bekommen, sobald Exposify Pro startet.</p>
+				<form class="launch-form js-send-launch-notification">
+					<div class="btn-field">
+						<input class="btn-field-input" type="email" name="email" placeholder="Email Adresse" required>
+						<button class="btn btn-square btn-white btn-fill btn-field-btn" type="submit">Benachrichtige mich</button>
+					</div>
+					<p class="small response"></p>
+				</form>
+			</div>
+		</main>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+
+			var _cio = _cio || [];
+			(function() {
+				var a,b,c;a=function(f){return function(){_cio.push([f].
+				concat(Array.prototype.slice.call(arguments,0)))}};b=["load","identify",
+				"sidentify","track","page"];for(c=0;c<b.length;c++){_cio[b[c]]=a(b[c])};
+				var t = document.createElement('script'),
+				    s = document.getElementsByTagName('script')[0];
+				t.async = true;
+				t.id    = 'cio-tracker';
+				t.setAttribute('data-site-id', '3f7854c37192cec221ef');
+				t.src = 'https://assets.customer.io/assets/track.js';
+				s.parentNode.insertBefore(t, s);
+			})();
+
+			$('.js-send-launch-notification').submit(function() {
+
+				var emailEl = $(this).find('[name="email"]'),
+					email = $(emailEl).val();
+
+				_cio.identify({
+					id: email,
+					email: email,
+					created_at: Math.floor(new Date() / 1000),
+					pro_launch_notify: true
+				});
+
+				$(this).find('[name="email"]').val('');
+				$(this).find('.response').html('Alles klar! 🙌 Wir benachrichtigen Sie, sobald es los geht.<br><a href="https://twitter.com/exposifyapp">Folgen Sie uns auf Twitter</a>');
+				$(this).find('.btn-field').hide();
+
+				return false;
+
+			});
+
+		</script>
+	</body>
+</html>
