@@ -45,8 +45,18 @@
 		background-size: calc(100% + 8px)
 		background-repeat: no-repeat
 
-		// fix 1px spaced bar
-		transform: translateY(1px)
+	// fix 1px spaced bar
+	.connected-wrapper
+		position: relative
+
+		&:before
+			content: ''
+			position: absolute
+			top: -1px
+			left: 0
+			right: 0
+			height: 1px
+			background-color: $light
 
 @media #{$medium-only}, #{$large-only}
 	.info > .row
