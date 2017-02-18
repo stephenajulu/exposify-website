@@ -25,7 +25,10 @@
 				<div class="small-12 column">
 					<a href="/"><img class="header-logo" src="/assets/img/exposify_logo_simple_white.svg" alt="Exposify"></a>
 					<nav class="header-nav">
-						<a class="btn btn-white btn-square js-modal-toggle" href="/#signup">Anmelden</a>
+						<a href="/exposes">Exposés</a>
+						<a href="/pricing">Preise</a>
+						<a href="https://app.exposify.de">Login</a>
+						<a class="btn btn-white btn-square js-modal-toggle" href="/#signup">Kostenlos starten</a>
 					</nav>
 				</div>
 			</div>
@@ -46,15 +49,6 @@
 				</div>
 			</div>
 			<a class="hero-scroll-down" href="#info"><i class="fa fa-angle-down"></i></a>
-		</section>
-
-		<section class="partner">
-			<div class="row">
-				<div class="large-12 column">
-					<div class="partner-text">In Partnerschaft mit:</div>
-					<a target="_blank" href="https://www.hausgold.de"><img class="partner-logo" src="/assets/img/hausgold_logo.svg" alt="Hausgold"></a>
-				</div>
-			</div>
 		</section>
 
 		<section class="process">
@@ -97,7 +91,7 @@
 						</ul>
 						<div class="box-content">
 							<a class="pricing-cta btn btn-large btn-square btn-accent btn-fill js-modal-toggle" href="/#signup">Los geht's <i class="fa fa-arrow-circle-right"></i></a>
-							<p class="pricing-info small">Keine versteckten Kosten, versprochen. Allerdings bieten wir kostenpflichtige Erweiterungen an.</p>
+							<p class="pricing-info small">Keine versteckten Kosten, versprochen. Wir bieten kostenpflichtige Erweiterungen an.</p>
 						</div>
 
 					</div>
