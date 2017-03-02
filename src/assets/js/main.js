@@ -48,8 +48,11 @@ forEach(ajaxForms, function(form) {
 		request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
 		request.onload = function() {
-			if (this.status == 200) {
+			if (this.status == 200 && this.response.status == 'invited') {
 				form.innerHTML = '<h3 class="title no-margin-top upper">Sie sind dabei! <span class="fa fa-rocket accent"></span></h3><p><b>YEAH!</b> Danke für die Anmeldung. Wir melden uns bei Ihnen innerhalb von 24 Stunden.</p><p class="no-margin-bottom"><a class="btn btn-primary btn-fill" href="http://blog.exposify.de">Sehen Sie sich unseren Makler Blog an</a></p>';
+				form.classList.add('success');
+			} else if (this.response.status = 'email_taken') {
+				form.innerHTML = '<h3 class="title no-margin-top upper">Es scheint so, als seien Sie schon dabei!</h3><p>Wir haben Ihre Email bereits im System. Melden Sie sich jetzt an, um durchzustartem.</p><p class="no-margin-bottom"><a class="btn btn-accent btn-large btn-square btn-fill" href="https://app.exposify.de">Jetzt anmelden</a></p>';
 				form.classList.add('success');
 			} else {
 				response.innerHTML = 'Hier stimmt noch was nicht. Überprüfen Sie die Email Adresse.';
