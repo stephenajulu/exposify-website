@@ -1,5 +1,6 @@
 .btn-field
 	+cf
+	border-radius: 5px
 	box-shadow: 0 0 10px rgba(black, .08)
 
 .btn-field-input,
@@ -16,6 +17,12 @@
 
 	&:hover, &:focus
 		background-color: rgba(white, .3)
+
+.btn-field-input-dark
+	color: $dark1
+	background-color: #f3f4f8
+	&:hover, &:focus
+		background-color: white
 
 @media #{$small-only}
 	.btn-field-input,

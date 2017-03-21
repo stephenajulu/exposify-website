@@ -48,10 +48,10 @@
 					<img class="hero-expose-img" src="/assets/img/exposes.png" alt="">
 				</div>
 			</div>
-			<a class="hero-scroll-down" href="#info"><i class="fa fa-angle-down"></i></a>
+			<a class="hero-scroll-down" href="#process"><i class="fa fa-angle-down"></i></a>
 		</section>
 
-		<section class="process">
+		<section class="process" id="process">
 			<div class="row">
 				<div class="process-step large-4 column">
 					<img src="/assets/img/expose_outline.svg" alt="">
