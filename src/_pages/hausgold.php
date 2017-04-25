@@ -131,7 +131,9 @@
 						um die weiteren Schritte für die Integration in Ihre Website zu besprechen.
 					</p>
 					<form class="exclusive-cta ajax" action="https://app.exposify.de/xhr-send-invite" method="post">
-						<input type="hidden" name="referral" value="<?php echo htmlspecialchars($_GET['ref']); ?>">
+						<?php if (isset($_GET['ref'])): ?>
+							<input type="hidden" name="referral" value="<?php echo htmlspecialchars($_GET['ref']); ?>">
+						<?php endif ?>
 						<div class="btn-field">
 							<input class="btn-field-input btn-field-input-dark" type="email" name="email" placeholder="Ihre Email Adresse" required>
 							<button class="btn btn-square btn-accent btn-fill btn-field-btn" type="submit">Starten</button>
@@ -182,7 +184,9 @@
 		<div class="modal box">
 			<div class="box-action"><i class="fa fa-close js-modal-toggle"></i></div>
 			<form class="box-content ajax" action="https://app.exposify.de/xhr-send-invite" method="post">
-				<input type="hidden" name="referral" value="<?php echo htmlspecialchars($_GET['ref']); ?>">
+				<?php if (isset($_GET['ref'])): ?>
+					<input type="hidden" name="referral" value="<?php echo htmlspecialchars($_GET['ref']); ?>">
+				<?php endif ?>
 				<h2 class="no-margin-top">Los geht's</h2>
 				<p>
 					Sehr gut, an welche Email Adresse sollen wir Ihre Einladung für Exposify senden?
