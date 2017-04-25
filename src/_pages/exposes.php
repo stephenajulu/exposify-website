@@ -151,6 +151,7 @@
 				<button class="btn btn-accent btn-fill btn-square btn-large btn-bold full-width" type="submit">Kostenlos starten</button>
 			</form>
 		</div>
+		<script src="https://www.google.com/recaptcha/api.js"></script>
 		<script src="/assets/js/main.js"></script>
 	</body>
 </html>

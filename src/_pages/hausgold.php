@@ -196,6 +196,7 @@
 			</form>
 		</div>
 
+		<script src="https://www.google.com/recaptcha/api.js"></script>
 		<script src="/assets/js/main.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.5/2/twemoji.min.js"></script>
 		<script>
