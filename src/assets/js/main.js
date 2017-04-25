@@ -74,8 +74,18 @@ function submitForm(form) {
 forEach(ajaxForms, function(form) {
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
-		var recaptchaEl = form.appendChild(document.createElement('div'));
-		grecaptcha.render(recaptchaEl, {
+
+		var recaptchaEl = form.querySelector('.recaptcha');
+
+		if (recaptchaEl) {
+			form.removeChild(recaptchaEl);
+		}
+
+		recaptchaEl = document.createElement('div');
+		recaptchaEl.className = 'recaptcha';
+		form.appendChild(recaptchaEl);
+
+		var recaptchaId = grecaptcha.render(recaptchaEl, {
 			'sitekey': '6Lf3QR4UAAAAANTMGR640NuFPo3FNP8uQI-Pex7W',
 			'size': 'invisible',
 			'badge': 'inline',
@@ -83,6 +93,6 @@ forEach(ajaxForms, function(form) {
 				submitForm(form);
 			}
 		});
-		grecaptcha.execute();
+		grecaptcha.execute(recaptchaId);
 	});
 });
