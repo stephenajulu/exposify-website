@@ -25,10 +25,18 @@
 				<div class="small-12 column">
 					<a href="/"><img class="header-logo" src="/assets/img/exposify_logo_simple_white.svg" alt="Exposify"></a>
 					<nav class="header-nav">
-						<a href="/exposes">Exposés</a>
-						<a href="/pricing">Preise</a>
-						<a href="https://app.exposify.de">Login</a>
-						<a class="btn btn-white btn-square js-modal-toggle" href="/#signup">Kostenlos starten</a>
+						<div class="header-nav-element js-show-header-nav-dropdown">
+							Entdecken
+							<div class="header-nav-dropdown">
+								<a href="/websites">Websites</a>
+								<a href="/analytics">Analysen</a>
+								<a href="/exposes">Exposés</a>
+								<a href="/requests">Interessenten</a>
+							</div>
+						</div>
+						<a class="header-nav-element" href="/pricing">Preise</a>
+						<a class="header-nav-element" href="https://app.exposify.de">Login</a>
+						<a class="header-nav-element btn btn-white btn-square" href="#signup">Kostenlos starten</a>
 					</nav>
 				</div>
 			</div>

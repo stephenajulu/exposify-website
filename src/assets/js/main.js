@@ -29,6 +29,16 @@ forEach(modalOpenButtons, function(button) {
 	});
 });
 
+document.querySelector('.js-show-header-nav-dropdown').addEventListener('click', function(e) {
+	document.querySelector('.header-nav-dropdown').classList.toggle('show');
+	e.stopPropagation();
+});
+
+document.querySelector('body').addEventListener('click', function() {
+	document.querySelector('.header-nav-dropdown').classList.remove('show');
+
+});
+
 function submitForm(form) {
 	var action   = form.getAttribute('action'),
 	    method   = form.getAttribute('method'),

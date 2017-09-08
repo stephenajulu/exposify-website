@@ -23,14 +23,55 @@
 .header-nav
 	float: right
 	letter-spacing: 1px
-	a
-		display: inline-block
-		margin-top: 10px
-		margin-left: 10px
-		padding: 10px
+
 	.btn
 		margin-top: 10px
 		padding: 10px 20px
 
 	@media(max-width: 451px)
 		display: none
+
+.header-nav-element
+	position: relative
+	display: inline-block
+	margin-top: 10px
+	margin-left: 10px
+	padding: 10px
+	cursor: pointer
+
+.header-nav-dropdown
+	z-index: 10
+	position: absolute
+	top: 50px
+	width: 200px
+	background-color: white
+	border-radius: 3px
+	border: 1px solid #e0e0e0
+	visibility: hidden
+	opacity: 0
+	transform: scale(.6)
+	transform-origin: 15px top
+	transition: all .3s
+	a
+		display: block
+		padding: 20px
+		color: $dark1
+
+	&.show
+		visibility: visible
+		opacity: 1
+		transform: scale(1)
+
+	&:before
+		content: ''
+		position: absolute
+		top: -6px
+		left: 10px
+		width: 10px
+		height: 10px
+		border: 1px solid #e0e0e0
+		border-top: 0
+		border-right: 0
+		border-bottom-left-radius: 3px
+		background: #fff
+		transform: rotate(135deg)
