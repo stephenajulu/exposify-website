@@ -1,0 +1,143 @@
+{% set title = 'Exposify für Hausgold' %}
+{% set bodyClasses = 'hausgold' %}
+{% set floatingHeader = true %}
+
+{% extends "templates/default.njk" %}
+
+{% block content %}
+	<section class="hero hero-hausgold">
+		<div class="row">
+			<div class="large-12 column white">
+				<h1 class="hero-title" id="hero-title">Genug von <span class="line-break">überteuerten Portalen?<span></h1>
+				<p class="hero-value" id="hero-value">
+					Exposify bringt Ihre Immobilien mit einem Klick suchmaschinenoptimiert auf Ihre Website. Hausgold Kunden können Exposify jetzt 30 Tage testen.
+				</p>
+				<a class="btn btn-large btn-square btn-accent btn-fill margin-center js-modal-toggle" href="/#signup">30 Tage kostenlos testen</a>
+			</div>
+		</div>
+		<a class="hero-scroll-down" href="#benefits"><i class="fa fa-angle-down"></i></a>
+	</section>
+
+	<section class="benefits" id="benefits">
+		<div class="row">
+			<div class="benefit large-4 column">
+				<div class="benefit-emoji">
+					<img src="https://twemoji.maxcdn.com/2/72x72/1f3a8.png" alt="🎨">
+				</div>
+				<h2>Individuelles Design</h2>
+				<p>
+					Ihre Website bildet die Brücke zwischen Ihnen und Ihren Kunden.
+					Wir passen uns Ihrem Corporate Design an und machen Ihren
+					Webauftritt zur Golden Gate!
+				</p>
+			</div>
+			<div class="benefit large-4 column">
+				<div class="benefit-emoji">
+					<img src="https://twemoji.maxcdn.com/2/72x72/26a1.png" alt="⚡️">
+				</div>
+				<h2>Schneller geht's nicht</h2>
+				<p>
+					Wir wissen, dass unsere App ein Mittel zum Zweck ist.
+					Deshalb minimieren wir die Zeit, die Sie vor dem PC benötigen –
+					ein Klick und Ihre Immobilie ist online.
+				</p>
+			</div>
+			<div class="benefit large-4 column">
+				<div class="benefit-emoji">
+					<img src="https://twemoji.maxcdn.com/2/72x72/1f4b0.png" alt="💰">
+				</div>
+				<h2>Faire Preispolitik</h2>
+				<p>
+					Für 7€ pro aktiver Immobilie im Monat bieten wir Ihnen eine
+					hochwertige Vermarktung aller Objekte und vollen Support.
+					Sie bezahlen nur für das, was Sie nutzen.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="story-section">
+		<div class="row">
+			<div class="large-12 column">
+				<div class="box story">
+					<h2>Hallo Hausgold Makler,</h2>
+					<p>
+						vor etwa zwei Jahren begannen wir mit der Arbeit an einer
+						Maklerwebsite. Unserer Auftrag war es, vorhandene Angebote
+						so aufzuwerten, dass diese besser bei Google gefunden werden.
+					</p>
+					<p>
+						Da es auf dem Markt keine für uns zufriedenstellende Lösung
+						für dieses Problem gab, haben wir selbst eine entwickelt: Exposify.
+					</p>
+					<p>
+						Momentan müssen Ihre Kunden den Umweg über eine Suchmaschine
+						und anschließend ein anonymes Portal nehmen, um überhaupt
+						auf Sie aufmerksam zu werden.
+					</p>
+					<p>
+						Wir glauben, dass in der Zukunft die persönliche Beziehung zum
+						Kunden noch wichtiger wird. Deswegen optimieren wir Ihre Website so,
+						dass potenzielle Interessenten Ihre Angebote schnell und direkt finden.
+					</p>
+					<p>
+						Täglich geben wir unser Bestes, damit Sie mit Exposify so
+						zufrieden sind wie wir.
+					</p>
+					<p class="italic">
+						– Das Exposify Team
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="exclusive before-footer">
+		<div class="row">
+			<div class="exclusive-partner large-6 column">
+				<h2>Exklusiv für <span class="line-break">Hausgold Makler</span></h2>
+				<img src="/assets/img/hausgold_logo.svg" alt="Hausgold">
+			</div>
+			<div class="large-6 column">
+				<p>
+					Sie erhalten <b>30 Tage kostenlos</b> und unverbindlich Zugang zu Exposify.
+					Sollte Exposify Ihnen gefallen, bezahlen Sie danach <b>7€ pro aktiver Immobilie im Monat</b>.
+				</p>
+				<p>
+					Nachdem Sie sich hier eingetragen haben, melden wir uns bei Ihnen,
+					um die weiteren Schritte für die Integration in Ihre Website zu besprechen.
+				</p>
+				<form class="exclusive-cta ajax" action="https://app.exposify.de/xhr-send-invite" method="post">
+					<?php if (isset($_GET['ref'])): ?>
+						<input type="hidden" name="referral" value="<?php echo htmlspecialchars($_GET['ref']); ?>">
+					<?php endif ?>
+					<div class="btn-field">
+						<input class="btn-field-input btn-field-input-dark" type="email" name="email" placeholder="Ihre Email Adresse" required>
+						<button class="btn btn-square btn-accent btn-fill btn-field-btn" type="submit">Starten</button>
+					</div>
+					<div class="small response hero-cta-response"></div>
+				</form>
+			</div>
+		</div>
+
+	</section>
+{% endblock %}
+
+{% block foot %}
+	{% include "templates/partials/modal.njk" %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.5/2/twemoji.min.js"></script>
+	<script>
+		twemoji.parse(document.body, {
+			callback: function(icon, options, variant) {
+				switch (icon) {
+					case 'a9':      // © copyright
+					return false;
+				}
+				return '' . concat(options.base, options.size, '/', icon, options.ext);
+			}
+		});
+	</script>
+{% endblock %}

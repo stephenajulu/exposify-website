@@ -1,0 +1,78 @@
+{% set title = 'Exposify Exposés' %}
+{% set bodyClasses = 'exposes' %}
+{% set floatingHeader = true %}
+{% set footerLight = true %}
+
+{% extends "templates/default.njk" %}
+
+{% block content %}
+	<section class="hero-expose">
+		<div class="row">
+			<div class="large-5 column white">
+				<h1 class="hero-expose-title" id="hero-title">Erstellen Sie ein Exposé in weniger als 3 Minuten.</h1>
+				<p class="hero-expose-value" id="hero-value">
+					Nie wieder Textvorlagen!<br>
+					Machen Sie Ihr eigenes Designer-Exposé <span class="line-break">für Ihre Kunden, blitzschnell und individuell.</span>
+				</p>
+				<a class="center btn btn-large btn-square btn-accent btn-fill js-modal-toggle" href="/#signup">Kostenlos starten</a>
+			</div>
+			<div class="large-7 column">
+				<img class="hero-expose-img" src="/assets/img/exposes.png" alt="">
+			</div>
+		</div>
+		<a class="hero-scroll-down" href="#process"><i class="fa fa-angle-down"></i></a>
+	</section>
+
+	<section class="process" id="process">
+		<div class="row">
+			<div class="process-step large-4 column">
+				<img src="/assets/img/expose_outline.svg" alt="">
+				<div class="step">1. Schritt</div>
+				<h2>Immobiliendaten eingeben</h2>
+				<p>Fokussieren Sie sich auf das, worauf es ankommt: Ansprechende Texte für Ihr Exposé zu kreieren. Benutzen Sie unsere vorgefertigten Felder oder erstellen Sie neue.</p>
+			</div>
+			<div class="process-step large-4 column">
+				<img src="/assets/img/expose_draft.svg" alt="">
+				<div class="step">2. Schritt</div>
+				<h2>Exposédesign anpassen</h2>
+				<p>Verwenden Sie Ihr Firmenlogo und passen Sie das Design an Ihre Wünsche an. Ihr Kunde wird Ihr Exposé gleich erkennen und es Ihrem Unternehmen zuordnen.</p>
+			</div>
+			<div class="process-step large-4 column">
+				<img src="/assets/img/expose_designed.svg" alt="">
+				<div class="step">3. Schritt</div>
+				<h2>PDF erstellen</h2>
+				<p>Nun können Sie sich zurücklehnen und wir übernehmen die Arbeit. Sie haben jetzt für alle Immobilien im Angebot einheitliche und moderne Exposés in Ihrem Firmendesign.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="pricing before-footer">
+		<div class="row">
+			<div class="large-12 column">
+				<div class="pricing-box box">
+					<div class="box-title box-title-accent">
+						<div class="pricing-plan">Free</div>
+						<div class="pricing-price">
+							<span class="pricing-currency">€</span>0
+						</div>
+					</div>
+					<ul class="box-list">
+						<li><i class="fa fa-check"></i> Unendlich viele Exposés</li>
+						<li><i class="fa fa-check"></i> Unendlich viele Benutzer</li>
+						<li><i class="fa fa-check"></i> Grundlegender Support</li>
+					</ul>
+					<div class="box-content">
+						<a class="pricing-cta btn btn-large btn-square btn-accent btn-fill js-modal-toggle" href="/#signup">Los geht's <i class="fa fa-arrow-circle-right"></i></a>
+						<p class="pricing-info small">Keine versteckten Kosten, wir bieten jedoch kostenpflichtige Erweiterungen an.</p>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block foot %}
+	{% include "templates/partials/modal.njk" %}
+{% endblock %}

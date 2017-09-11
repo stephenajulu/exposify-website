@@ -1,0 +1,89 @@
+{% set title = 'Exposify Maklerapp – Marketing für Immobilienprofis' %}
+{% set bodyClasses = 'landing' %}
+{% set floatingHeader = true %}
+
+{% extends "templates/default.njk" %}
+
+{% block content %}
+	<section class="hero">
+		<div class="row">
+			<div class="large-12 column white">
+				<h1 class="hero-title animate-in" id="hero-title">Machen Sie Ihre Website <span class="line-break">zum Immobilienportal.</span></h1>
+				<p class="hero-value animate-in" id="hero-value">Stellen Sie Ihre Firma in den Vordergrund und bieten Sie <span class="line-break">Immobilien für Suchmaschinen</span> optimiert an.</p>
+				<form class="hero-form animate-in ajax" id="hero-form" action="https://app.exposify.de/xhr-send-invite" method="post">
+					<div class="btn-field hero-cta">
+						<input class="btn-field-input" type="email" name="email" placeholder="Email Adresse" required>
+						<button class="btn btn-square btn-accent btn-fill btn-field-btn" type="submit">Kostenlos starten</button>
+					</div>
+					<div class="small response hero-cta-response"></div>
+				</form>
+			</div>
+		</div>
+		<a class="hero-scroll-down" href="#info"><i class="fa fa-angle-down"></i></a>
+	</section>
+
+	<section class="info" id="info">
+		<div class="full-width row">
+			<div class="medium-6 xlarge-12 column offers-wrapper">
+				<div class="row offers">
+					<div class="xlarge-7 column">
+						<img class="offers-image" src="/assets/img/exposify_browser.png" alt="Exposify App">
+					</div>
+					<div class="xlarge-5 column">
+						<div class="offers-blurb">
+							<p class="primary uppercase info-tagline">Immobilien Web-App</p>
+							<h2 class="info-heading">Angebote <span class="line-break">im Fokus</span></h2>
+							<p>Ein zentraler Ort für alle Ihre Immobilien, der sich Ihren Bedürfnissen anpasst. Versorgen Sie Ihre Interessenten sofort mit allen relevanten Informationen und steigern Sie somit Ihre Produktivität.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="medium-6 xlarge-12 column connected-wrapper">
+				<div class="row connected">
+					<div class="xlarge-7 xlarge-push-5 column">
+						<img class="connected-image" src="/assets/img/exposify_connected.png" alt="Exposify Verbunden">
+					</div>
+					<div class="xlarge-5 xlarge-pull-7 column">
+						<div class="connected-blurb">
+							<p class="primary uppercase info-tagline">Für moderne Makler</p>
+							<h2 class="info-heading">Mit allem verbunden</h2>
+							<p>Bearbeiten Sie Immobilien alleine oder im Team. Mit einem Klick sind Änderungen automatisch auf Ihrer Website, PDF-Exposés und den integrierten Immobilienportalen.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="signup before-footer" id="signup">
+		<div class="row">
+			<div class="small-12 column">
+				<div class="box">
+					<h2 class="box-title">Für Exposify anmelden</h2>
+					<form class="box-content ajax" action="https://app.exposify.de/xhr-send-invite" method="post">
+						<p class="no-margin-top">An welche Email Adresse sollen wir Ihre Einladung für Exposify senden?</p>
+						<div class="field" style="margin-bottom: .8em;">
+							<i class="accent field-icon fa fa-envelope"></i>
+							<input class="field-input field-input-accent" type="email" name="email" placeholder="Email Adresse" required>
+						</div>
+						<div class="small response" style="margin: 1.2em 0;"></div>
+						<button class="btn btn-accent btn-fill btn-square btn-large btn-bold full-width" type="submit">Kostenlos starten</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		setTimeout(function() {
+			document.getElementById('hero-title').classList.add('fade-up');
+			document.getElementById('hero-value').classList.add('fade-up');
+		}, 500);
+		setTimeout(function() {
+			document.getElementById('hero-form').classList.add('fade');
+		}, 1500);
+	</script>
+{% endblock %}
