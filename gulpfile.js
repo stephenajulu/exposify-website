@@ -33,7 +33,7 @@ gulp.task('html', () =>
 
 gulp.task('sass', () =>
 	gulp.src('src/assets/css/*.sass')
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(gulp.dest('dist/assets/css/'))
 		.pipe(browsersync.stream())
