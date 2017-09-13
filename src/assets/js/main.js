@@ -58,6 +58,8 @@ function submitForm(form) {
 
 	request.onload = function() {
 
+		// TODO: refactor different email systems
+
 		var responseStatus = JSON.parse(this.response).status;
 		console.log(responseStatus);
 		if (this.status == 200 && responseStatus == 'invited') {
@@ -65,6 +67,9 @@ function submitForm(form) {
 			form.classList.add('success');
 		} else if (responseStatus == 'email_taken') {
 			form.innerHTML = '<h3 class="title no-margin-top upper">Es scheint so, als seien Sie schon dabei!</h3><p>Wir haben Ihre Email bereits im System. Melden Sie sich jetzt an, um durchzustarten.</p><p class="no-margin-bottom"><a class="btn btn-accent btn-large btn-square btn-fill" href="https://app.exposify.de">Jetzt anmelden</a></p>';
+			form.classList.add('success');
+		} else if ('true') {
+			form.innerHTML = 'Wir haben die Email abgeschickt und melden uns so schnell wie möglich bei Ihnen.';
 			form.classList.add('success');
 		} else {
 			response.innerHTML = 'Hier stimmt noch was nicht. Überprüfen Sie die Email Adresse.';

@@ -40,7 +40,7 @@ gulp.task('sass', () =>
 );
 
 gulp.task('copy', () =>
-	gulp.src(['src/*', '!src/index.njk', 'src/assets/img/*'])
+	gulp.src(['src/*', '!src/index.njk', 'src/assets/img/*', 'src/assets/php/*'])
 		.pipe(copy('dist', {prefix: 1}))
 );
 
@@ -71,7 +71,7 @@ gulp.task('serve', () => {
 
 	gulp.watch(['src/index.njk', 'src/templates/**/*.njk', 'src/pages/**/*.njk'], ['html-watch']);
 	gulp.watch('src/assets/css/**/*.sass', ['sass']);
-	gulp.watch(['src/*', '!src/index.njk', 'src/assets/img/*'], ['copy-watch']);
+	gulp.watch(['src/*', '!src/index.njk', 'src/assets/img/*', 'src/assets/php/*'], ['copy-watch']);
 	gulp.watch('src/assets/js/**/*.js', ['scripts-watch']);
 });
 

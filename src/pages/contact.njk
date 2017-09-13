@@ -1,0 +1,79 @@
+{% set title = 'Kontakt' %}
+
+{% extends "templates/default.njk" %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="large-8 column">
+			<h1>{{title}}</h1>
+
+			<p>
+				Wir möchten mit Ihnen eine enge Kundenbeziehung führen und bei Fragen aller Art zur Seite stehen. Deswegen bieten wir Ihnen zahlreiche Möglichkeiten, uns zu kontaktieren.
+			</p>
+			<p>
+				Schreiben Sie uns im <a class="js-open-chat" href="#">Livechat</a>, rufen Sie uns unter <a href="tel:+4944213597840">04421 3597840</a> an oder schreiben Sie eine Mail an <a href="mailto:team@exposify.de">team@exposify.de</a> oder hier im Kontakt-Formular.
+			</p>
+
+			<form class="ajax" action="/assets/php/contact.php" method="POST" data-success-status="true">
+				<div class="row">
+					<fieldset class="large-6 column">
+						<label for="name">Name</label>
+						<input class="field" id="name" name="name" type="text">
+					</fieldset>
+					<fieldset class="large-6 column">
+						<label for="mail">Mail</label>
+						<input class="field" id="mail" name="mail" type="mail">
+					</fieldset>
+				</div>
+
+				<div class="row">
+					<fieldset class="large-12 column" style="margin-top: 1em;">
+						<label for="message">Nachricht</label>
+						<textarea class="field" id="message" name="message"></textarea>
+					</fieldset>
+				</div>
+
+				<div class="row">
+					<div class="large-12 column" style="margin-top: 1em;">
+						<?php if (isset($meta)): ?>
+							<input type="hidden" name="meta" value="<?php echo $meta; ?>">
+						<?php endif ?>
+
+						<button class="btn btn-accent btn-fill btn-square btn-large btn-bold" style="float: right;" type="submit">Absenden</button>
+
+						<span class="response"></span>
+					</div>
+				</div>
+
+
+			</form>
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		function forEachElement(selector, fn) {
+			var elements = document.querySelectorAll(selector);
+			for (var i = 0; i < elements.length; i++) {
+				fn(elements[i], i);
+			}
+		}
+
+		function openSidebar(driftApi, event) {
+			event.preventDefault();
+			driftApi.sidebar.open();
+			return false;
+		}
+
+		drift.on('ready', function(api) {
+			var handleClick = openSidebar.bind(this, api);
+			forEachElement('.js-open-chat', function(el) {
+				el.addEventListener('click', handleClick);
+			});
+		});
+	</script>
+{% endblock %}
