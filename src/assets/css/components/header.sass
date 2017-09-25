@@ -1,4 +1,5 @@
 .header
+	position: relative
 	z-index: 20
 	padding: 20px 0
 	color: white
@@ -11,30 +12,16 @@
 	right: 0
 	background: none
 
-.header-logo
-	display: table
-	height: 60px
-	margin: 0 auto
-
-	@media(min-width: 450px)
-		float: left
-		margin-left: -9px
-
 .header-nav
-	float: right
 	letter-spacing: 1px
 
 	.btn
 		margin-top: 10px
 		padding: 10px 20px
 
-	@media(max-width: 451px)
-		display: none
-
 .header-nav-element
 	position: relative
 	display: inline-block
-	margin-top: 10px
 	margin-left: 10px
 	padding: 10px
 	cursor: pointer
@@ -75,3 +62,70 @@
 		border-bottom-left-radius: 3px
 		background: #fff
 		transform: rotate(135deg)
+
+.header-hamburger
+	position: relative
+	z-index: 100
+	display: none
+	width: 40px
+	float: right
+	border: none
+	cursor: pointer
+
+	&:focus
+		outline: none
+
+	&.header-hamburger-close
+		.line-1
+			transform: translateY(11px) rotate(-45deg)
+		.line-2
+			transform: rotate(225deg)
+		.line-3
+			transform: translateY(-11px) rotate(-45deg)
+
+	.line
+		display: block
+		width: 30px
+		height: 3px
+		background-color: white
+		margin-bottom: 8px
+		border-radius: 1px
+		transition: transform .3s
+
+	.line-2
+		transition: transform .6s
+
+// Mobile Navigation Only
+@media(max-width: 559px)
+	.header.is-mobile-nav-shown
+		.header-logo .logo-wordmark
+			display: none
+		.header-nav
+			display: table
+
+	.header-nav
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		display: none
+		width: 100%
+		text-align: center
+
+	.header-nav-element
+		font-size: .9em
+		margin-left: 0
+
+	.header-hamburger
+		display: block
+
+@media(max-width: 800px)
+	&.no-mobile
+		display: none
+
+// Everything above Mobile
+@media(min-width: 560px)
+	.header-logo
+		width: 180px
+	.header-nav
+		float: right

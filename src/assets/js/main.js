@@ -29,6 +29,11 @@ forEach(modalOpenButtons, function(button) {
 	});
 });
 
+document.querySelector('.js-toggle-header-menu').addEventListener('click', function() {
+	document.querySelector('.header-hamburger').classList.toggle('header-hamburger-close');
+	document.querySelector('.header').classList.toggle('is-mobile-nav-shown');
+});
+
 document.querySelector('.js-show-header-nav-dropdown').addEventListener('click', function(e) {
 	document.querySelector('.header-nav-dropdown').classList.toggle('show');
 	e.stopPropagation();
@@ -36,7 +41,6 @@ document.querySelector('.js-show-header-nav-dropdown').addEventListener('click',
 
 document.querySelector('body').addEventListener('click', function() {
 	document.querySelector('.header-nav-dropdown').classList.remove('show');
-
 });
 
 function submitForm(form) {
