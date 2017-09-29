@@ -43,6 +43,43 @@ document.querySelector('body').addEventListener('click', function() {
 	document.querySelector('.header-nav-dropdown').classList.remove('show');
 });
 
+
+// TESTIMONIAL SLIDER
+
+var counter = 1;
+
+testimonial1El = document.querySelector('#testimonial-1');
+testimonial2El = document.querySelector('#testimonial-2');
+testimonial3El = document.querySelector('#testimonial-3');
+
+function renderTestimonial(increment) {
+	counter += increment;
+	console.log(counter);
+	if (counter == 4) {
+		counter = 1;
+	} else if (counter == 0) {
+		counter = 3;
+	}
+
+	testimonial1El.style.display = 'none';
+	testimonial2El.style.display = 'none';
+	testimonial3El.style.display = 'none';
+	document.querySelector('#testimonial-' + counter).style.display = '';
+}
+
+renderTestimonial(0)
+
+document.querySelector('.js-testimonial-prev').addEventListener('click', function(e) {
+	renderTestimonial(-1);
+});
+
+document.querySelector('.js-testimonial-next').addEventListener('click', function(e) {
+	renderTestimonial(1);
+});
+
+// END OF TESTIMONIAL SLIDER
+
+
 function submitForm(form) {
 	var action   = form.getAttribute('action'),
 	    method   = form.getAttribute('method'),
