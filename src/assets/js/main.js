@@ -44,42 +44,6 @@ document.querySelector('body').addEventListener('click', function() {
 });
 
 
-// TESTIMONIAL SLIDER
-
-var counter = 1;
-
-testimonial1El = document.querySelector('#testimonial-1');
-testimonial2El = document.querySelector('#testimonial-2');
-testimonial3El = document.querySelector('#testimonial-3');
-
-function renderTestimonial(increment) {
-	counter += increment;
-	console.log(counter);
-	if (counter == 4) {
-		counter = 1;
-	} else if (counter == 0) {
-		counter = 3;
-	}
-
-	testimonial1El.style.display = 'none';
-	testimonial2El.style.display = 'none';
-	testimonial3El.style.display = 'none';
-	document.querySelector('#testimonial-' + counter).style.display = '';
-}
-
-renderTestimonial(0)
-
-document.querySelector('.js-testimonial-prev').addEventListener('click', function(e) {
-	renderTestimonial(-1);
-});
-
-document.querySelector('.js-testimonial-next').addEventListener('click', function(e) {
-	renderTestimonial(1);
-});
-
-// END OF TESTIMONIAL SLIDER
-
-
 function submitForm(form) {
 	var action   = form.getAttribute('action'),
 	    method   = form.getAttribute('method'),
@@ -101,15 +65,16 @@ function submitForm(form) {
 
 		// TODO: refactor different email systems
 
-		var responseStatus = JSON.parse(this.response).status;
-		console.log(responseStatus);
-		if (this.status == 200 && responseStatus == 'invited') {
-			form.innerHTML = '<h3 class="title no-margin-top upper">Sie sind dabei! <span class="fa fa-rocket accent"></span></h3><p class="no-margin-bottom">Schauen Sie in Ihr Postfach, Sie erhalten in den nächsten Minuten eine Email von uns.</p>';
-			form.classList.add('success');
-		} else if (responseStatus == 'email_taken') {
-			form.innerHTML = '<h3 class="title no-margin-top upper">Es scheint so, als seien Sie schon dabei!</h3><p>Wir haben Ihre Email bereits im System. Melden Sie sich jetzt an, um durchzustarten.</p><p class="no-margin-bottom"><a class="btn btn-accent btn-large btn-square btn-fill" href="https://app.exposify.de">Jetzt anmelden</a></p>';
-			form.classList.add('success');
-		} else if ('true') {
+		var response = JSON.parse(this.response);
+
+		if (this.status == 200 && response.status == 'success') {
+			var link = response.link;
+			window.location.replace(link);
+			setTimeout(function() {
+				form.innerHTML = '<h3 class="title no-margin-top upper">Danke für Ihre Email! <span class="fa fa-rocket accent"></span></h3><p class="no-margin-bottom"><a href="' + link + '">Klicken Sie hier um fortzufahren</a>.</p>';
+				form.classList.add('success');
+			}, 1000);
+		} else if (response.status == 'true') {
 			form.innerHTML = 'Wir haben die Email abgeschickt und melden uns so schnell wie möglich bei Ihnen.';
 			form.classList.add('success');
 		} else {
