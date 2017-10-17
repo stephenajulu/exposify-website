@@ -7,7 +7,7 @@
 		<title>{{ title }}</title>
 		<meta name="description" content="Exposify hilft Ihnen bei der Erstellung und Präsentation von Exposés für Ihre Website und als individuelles PDF für Ihre Kunden.">
 		<meta name="keywords" content="Immobilien,Programm,Verwaltung,Makler,Exposé,PDF,Website">
-		<link rel="alternate" hreflang="de" href="/">
+		<link rel="alternate" hreflang="de" href="/{{ link }}">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -66,7 +66,7 @@ gemeinsam mit uns zu arbeiten.
 			ga('create', 'UA-72936813-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-		
+
 		{% block scripts %}{% endblock %}
 	</body>
 </html>
