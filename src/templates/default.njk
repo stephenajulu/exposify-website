@@ -5,7 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<title>{{ title }}</title>
-		<meta name="description" content="Exposify hilft Ihnen bei der Erstellung und Präsentation von Exposés für Ihre Website und als individuelles PDF für Ihre Kunden.">
+		{% if description %}
+			<meta name="description" content="{{ description }}">
+		{% endif %}
 		<meta name="keywords" content="Immobilien,Programm,Verwaltung,Makler,Exposé,PDF,Website">
 		<link rel="alternate" hreflang="de" href="/{{ link }}">
 
