@@ -13,75 +13,22 @@
 	<section class="hero">
 		<div class="row">
 			<div class="large-12 column white">
-				<h1 class="hero-title animate-in" id="hero-title">Die Marketing–Plattform für Immobilienprofis</h1>
-				<p class="hero-value animate-in" id="hero-value">Stärken Sie Ihre Marke und hinterlassen Sie einen bleibenden Eindruck – auf allen Kanälen.</p>
+				<h1 class="hero-title animate-in" id="hero-title">Die Immobiliensoftware für <span class="line-break">innovative Maklerunternehmen</span></h1>
+				<p class="hero-value animate-in" id="hero-value">Marketing und Kundenverwaltung einfach easy</p>
 				<form class="hero-form animate-in ajax" id="hero-form" action="https://app.exposify.de/xhr-send-invite" method="post">
 					<div class="btn-field hero-cta">
 						<input class="btn-field-input" type="email" name="email" placeholder="Email Adresse" required>
-						<button class="btn btn-square btn-accent btn-fill btn-field-btn" type="submit">Kostenlos starten</button>
+						<button class="btn btn-square btn-accent btn-fill btn-field-btn" type="submit">Jetzt loslegen</button>
 					</div>
 					<div class="small response hero-cta-response"></div>
 				</form>
 			</div>
 		</div>
-		<a class="hero-scroll-down" href="#websites"><i class="fa fa-angle-down"></i></a>
+		<a class="hero-scroll-down" href="#platform"><i class="fa fa-angle-down"></i></a>
 	</section>
 
-	<section id="websites" class="websites">
-		<div class="row">
-			<div class="large-12 column text-center" style="margin-bottom: 50px;">
-				<h2>Machen Sie Ihre Website <span class="line-break">zum Immobilienportal.</span></h2>
-				<p>Stellen Sie Ihre Firma in den Vordergrund und bieten Sie <span class="line-break">Immobilien für Suchmaschinen</span> optimiert an.</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="large-4 column">
-				<img src="/assets/img/pencil.svg" alt="Individuell">
-				<h3>Individualität</h3>
-				<p>
-					Präsentieren Sie sich individuell, anstatt in den unzähligen Angeboten
-					der Portale unterzugehen. Ihre Website hat das Potenzial, Sie von
-					Ihrem lokalen Markt abzuheben und Ihren Ruf zu stärken.
-				</p>
-				<a class="btn btn-primary" href="/websites">Mehr erfahren</a>
-			</div>
-			<div class="large-4 column">
-				<img src="/assets/img/browser-2.svg" alt="Suchmaschinenoptimiert">
-				<h3>Suchmaschinenoptimierung</h3>
-				<p>
-					Wie gelangen potenzielle Kunden auf Ihre Website?
-					Suchmaschinenoptimierung ist eines der komplexesten Themen des
-					Internetmarketing. Wir helfen Ihnen sowohl technisch als auch inhaltlich.
-				</p>
-				<a class="btn btn-primary" href="/websites">Mehr erfahren</a>
-			</div>
-			<div class="large-4 column">
-				<img src="/assets/img/stats-2.svg" alt="Statistik">
-				<h3>Analysen</h3>
-				<p>
-					Sie wollen auf Ihrem Markt das bestmögliche Immobilienangebot
-					präsentieren! Nun können Sie sehen, welche Ihrer Strategien
-					am zielführendsten sind und sich dementsprechenend anpassen.
-				</p>
-				<a class="btn btn-primary" href="/analytics">Mehr erfahren</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="platform">
-		<div class="row">
-			<div class="large-6 column">
-				<img src="/assets/img/exposify_connected.png" alt="Exposify ist mit allem verbunden">
-			</div>
-			<div class="large-6 column" style="margin-top: 70px;">
-				<h2>Eine Plattform für Ihr Marketing</h2>
-				<p>• Vermarkten Sie Ihre Immobilien auf Ihrer Website, auf diversen Immobilienportalen und per PDF-Exposé.</p>
-				<p>• Verwalten Sie Interessenten und Kunden an einem zentralen Ort.</p>
-				<p>• Verbessern Sie Ihre Angebote mithilfe von aufschlussreichen Analysen über das Verhalten Ihrer Interessenten.</p>
-			</div>
-		</div>
-	</section>
-
+	{% include 'templates/partials/platform.njk' %}
+	{% include 'templates/partials/websites.njk' %}
 	{% include 'templates/partials/testimonials.njk' %}
 
 	<section class="signup before-footer" id="signup">
@@ -99,7 +46,7 @@
 							<input class="field-input field-input-accent" type="email" name="email" placeholder="Email Adresse" required>
 						</div>
 						<div class="small response" style="margin: 1.2em 0;"></div>
-						<button class="btn btn-accent btn-fill btn-square btn-large btn-bold full-width" type="submit">Kostenlos starten</button>
+						<button class="btn btn-accent btn-fill btn-square btn-large btn-bold full-width" type="submit">Jetzt loslegen</button>
 					</form>
 				</div>
 			</div>
