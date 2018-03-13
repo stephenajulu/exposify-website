@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const connect = require('gulp-connect-php');
 const nunjucks = require('gulp-nunjucks-api');
+const cachebust = require('gulp-cache-bust');
 const replaceExt = require('gulp-ext-replace');
 const browsersync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
@@ -28,6 +29,7 @@ gulp.task('html', () =>
 		}))
 		.pipe(replaceExt('.php'))
 		.pipe(moveToDirectoryIndexes({extensions: '.php'}))
+		.pipe(cachebust({basePath: 'dist/'}))
 		.pipe(gulp.dest('dist'))
 );
 
