@@ -77,5 +77,5 @@ gulp.task('serve', () => {
 	gulp.watch('src/assets/js/**/*.js', ['scripts-watch']);
 });
 
-gulp.task('build', ['html', 'sass', 'copy', 'scripts']);
+gulp.task('build', ['sass', 'copy', 'scripts', 'html']);
 gulp.task('default', ['build', 'serve']);
