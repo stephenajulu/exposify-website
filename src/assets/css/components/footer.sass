@@ -31,16 +31,9 @@
 	&.footer-transition-light:before
 		background-image: url(/assets/img/footer_background_dark_transition_dark.svg)
 
-.footer.footer-light
-	background-color: white
-	&:before
-		background-image: url(/assets/img/footer_background_light.svg)
-	&.footer-transition-light:before
-		background-image: url(/assets/img/footer_background_light_transition_light.svg)
-
 .footer-logo
-	height: 60px
-	margin-left: -9px
+	width: 35px
+	margin: 6px 0 11px
 
 .footer-copy
 	margin-bottom: 3em
@@ -54,9 +47,6 @@
 	.bull
 		margin: 0 .4em
 
-.footer-twitter
-	position: relative
-
 .footer-heading
 	font-size: 1.2em
 	font-weight: 400
@@ -66,7 +56,7 @@
 	margin: 0
 
 	li
-		margin-bottom: .3em
+		margin-bottom: .6em
 		list-style: none
 
 .before-footer
@@ -87,10 +77,3 @@
 @media #{$medium-only}
 	.footer-right-section
 		padding-left: 74px
-
-@media #{$medium-up}
-	.footer-left-section
-		margin-top: -10px
-
-	.footer-copy
-		margin-left: 44px

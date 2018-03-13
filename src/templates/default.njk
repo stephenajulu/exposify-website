@@ -41,7 +41,10 @@ gemeinsam mit uns zu arbeiten.
 	<body class="{{ bodyClasses }}">
 		<!--[if lt IE 10]><p class="browserupgrade">Sie benutzen einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/">aktualisieren Sie ihren Browser</a> um das Internet-Erlebnis zu verbessern.</p><![endif]-->
 
-		{% include "./partials/header.njk" %}
+		<div class="header-wrapper {% if floatingHeader %}header-wrapper-overlay{% endif %}">
+			{% include "./partials/contact-header.njk" %}
+			{% include "./partials/header.njk" %}
+		</div>
 
 		<main>
 			{% block content %}{% endblock %}
