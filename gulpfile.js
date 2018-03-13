@@ -42,7 +42,7 @@ gulp.task('sass', () =>
 );
 
 gulp.task('copy', () =>
-	gulp.src(['src/*', '!src/index.njk', 'src/assets/img/*', 'src/assets/php/*', 'src/.htaccess'])
+	gulp.src(['src/*', '!src/index.njk', 'src/assets/img/*', 'src/assets/php/*'])
 		.pipe(copy('dist', {prefix: 1}))
 );
 

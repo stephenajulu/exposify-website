@@ -1,4 +1,0 @@
-# Redirect old routes
-Redirect 301 /impressum https://www.exposify.de/imprint
-Redirect 301 /requests https://www.exposify.de/crm
-Redirect 301 /pro https://www.exposify.de
