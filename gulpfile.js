@@ -18,7 +18,8 @@ function reload(done) {
 	done();
 }
 
-gulp.task('html', () =>
+// The html task depends on the tasks sass and scripts for cachebust
+gulp.task('html', ['sass', 'scripts'], () =>
 	gulp.src(['src/index.njk', 'src/pages/**/*.njk'])
 		.pipe(nunjucks({src: 'src/'}))
 		.pipe(htmlmin({
@@ -57,7 +58,7 @@ gulp.task('html-watch', ['html'], reload);
 gulp.task('scripts-watch', ['scripts'], reload);
 gulp.task('copy-watch', ['copy'], reload);
 
-gulp.task('serve', () => {
+gulp.task('serve', ['build'], () => {
 	let serverConf = {
 		base: 'dist/',
 		port: 2205,
@@ -77,5 +78,5 @@ gulp.task('serve', () => {
 	gulp.watch('src/assets/js/**/*.js', ['scripts-watch']);
 });
 
-gulp.task('build', ['sass', 'copy', 'scripts', 'html']);
+gulp.task('build', ['html', 'sass', 'copy', 'scripts']);
 gulp.task('default', ['build', 'serve']);
