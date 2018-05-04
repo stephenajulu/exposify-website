@@ -6,6 +6,7 @@ on startup php-fpm7
 # Redirect old routes
 redir /impressum /imprint
 redir /requests /crm
+redir /agb /nutzungsbedingungen
 redir /pro /
 
 log stdout
